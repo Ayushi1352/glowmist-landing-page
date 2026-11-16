@@ -10,17 +10,17 @@ export const ContactSection = ({ data, form, company }: { data?: ContactData; fo
 
   return (
     <section id={data.id} className="relative isolate scroll-mt-[4.5rem] overflow-hidden bg-[var(--color-bg-dark)] lg:scroll-mt-[5.75rem]">
-      <Image src={data.backgroundImage} alt="" fill quality={80} sizes="100vw" className="-z-20 object-cover object-left" />
+      <Image src={data.backgroundImage} alt="" fill sizes="100vw" className="-z-20 object-cover object-left" />
       {/* a light shade on phones and tablets, where the text runs over the bright towels */}
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[var(--color-contact-shade)] lg:hidden" />
 
       <div className="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-0 lg:pb-[3.9rem] lg:pt-[1.4rem]">
         <div data-reveal className="text-center text-[var(--color-white)]">
           <Ornament lineClass="bg-[var(--color-white)]" />
-          <h2 className={`mt-[0.2rem] text-[2.8rem] sm:text-[3.6rem] lg:text-[5.2rem] ${titleClass}`}>
+          <h2 className={`-mt-[0.45rem] text-[2.8rem] sm:text-[3.6rem] lg:text-[5.2rem] ${titleClass}`}>
             {data.titleTop} <span className="text-[var(--color-pink-light)]">{data.titleAccent}</span>
           </h2>
-          <p className="mx-auto mt-[0.5rem] max-w-[40rem] font-heading text-[1.1rem] leading-[1.5] sm:text-[1.2rem] lg:max-w-none lg:text-[1.42rem] lg:leading-[1.9rem]">
+          <p className="mx-auto mt-[0.5rem] max-w-[40rem] font-heading text-[1.1rem] leading-[1.5] sm:text-[1.2rem] lg:max-w-none lg:text-[1.55rem] lg:leading-[1.9rem]">
             {data.descriptionLines.map((line) => (
               <span key={line} className="lg:block">
                 {line}{" "}
@@ -45,8 +45,8 @@ export const ContactSection = ({ data, form, company }: { data?: ContactData; fo
                       <Icon name={item.icon} className="size-[1.75rem]" strokeWidth={1.9} />
                     </span>
                     <span className="min-w-0">
-                      <span className="block font-heading text-[1.3rem] font-bold leading-tight lg:text-[1.4rem]">{item.title}</span>
-                      <span className="mt-[0.2rem] block break-words font-sans text-[1.1rem] leading-[1.6rem] group-hover:underline group-hover:underline-offset-4 lg:text-[1.3rem]">
+                      <span className="block font-heading text-[1.3rem] font-bold leading-tight transition-colors group-hover:text-[var(--color-pink-light)] lg:text-[1.4rem]">{item.title}</span>
+                      <span className="mt-[0.2rem] block break-words font-sans text-[1.1rem] leading-[1.6rem] group-hover:underline group-hover:underline-offset-4 lg:text-[1.22rem]">
                         {item.lines.map((line) => (
                           <span key={line} className="block">
                             {line}

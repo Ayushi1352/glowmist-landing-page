@@ -23,10 +23,10 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
               {data.titleTop}
               <span className="block font-semibold italic text-[var(--color-primary)]">{data.titleAccent}</span>
             </h2>
-            <p className="mt-6 max-w-[32.5rem] text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:ml-[0.84rem] lg:mt-[3rem] lg:text-[1.22rem] lg:leading-[1.78rem]">{data.description}</p>
+            <p className="mt-6 max-w-[33rem] text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:ml-[0.84rem] lg:mt-[3rem] lg:text-[1.38rem] lg:leading-[1.78rem]">{data.description}</p>
           </div>
 
-          <ul className="mt-8 grid gap-[1.5rem] lg:ml-[1.55rem] lg:mt-[2.16rem]">
+          <ul className="mt-8 grid gap-[1.5rem] lg:ml-[1.55rem] lg:mt-[2.16rem] lg:w-[39.84rem]">
             {data.features.map((feature, index) => (
               <li
                 key={feature.id}
@@ -39,8 +39,8 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
                 </span>
                 <span aria-hidden="true" className="mx-[1.85rem] hidden h-[4.45rem] w-[0.1rem] shrink-0 bg-[var(--color-divider)] sm:block" />
                 <span className="pr-4 sm:pr-[1.8rem]">
-                  <span className="block font-sans text-[1.35rem] font-extrabold leading-tight text-[var(--color-heading)] lg:text-[1.66rem]">{feature.title}</span>
-                  <span className="mt-[0.2rem] block font-sans text-[0.95rem] leading-[1.5] text-[var(--color-text)] lg:text-[1.125rem]">{feature.text}</span>
+                  <span className="block font-sans text-[1.35rem] font-extrabold leading-tight text-[var(--color-heading)] lg:text-[1.9rem]">{feature.title}</span>
+                  <span className="mt-[0.2rem] block font-sans text-[0.95rem] leading-[1.5] text-[var(--color-text)] lg:text-[1.2rem]">{feature.text}</span>
                 </span>
               </li>
             ))}

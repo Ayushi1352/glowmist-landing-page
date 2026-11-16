@@ -15,10 +15,10 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
         width={290}
         height={290}
         sizes="218px"
-        className="pointer-events-none absolute right-0 top-[4.45rem] -z-10 hidden w-[13.6rem] md:block lg:left-[76.17rem] lg:right-auto"
+        className="pointer-events-none absolute right-0 top-[4.45rem] -z-10 hidden w-[13.6rem] md:block"
       />
       <div className="relative mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-[3.52rem] lg:pb-[2.9rem] lg:pt-[3.98rem]">
-        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} sideLines sizeClass="lg:text-[4.41rem]" />
+        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} sideLines sizeClass="lg:text-[4.41rem]" descriptionClass="font-heading text-[var(--color-heading)] lg:!text-[1.37rem]" />
 
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-[2.1rem] lg:grid-cols-4 lg:gap-[1.97rem]">
           {data.services.map((service, index) => {
@@ -37,19 +37,19 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
                     : "bg-gradient-to-b from-[var(--color-bg-card)] to-[var(--color-bg-card-light)] text-[var(--color-heading)] shadow-[0_1rem_2rem_-1.4rem_var(--color-shadow-card)]"
                 }`}
               >
-                <div className={`relative h-[17rem] sm:h-[18rem] ${raised ? "lg:h-[19.9rem]" : "lg:h-[17.4rem]"}`}>
+                <div className={`relative ${raised ? "aspect-[420/418] lg:aspect-auto lg:h-[19.9rem]" : "aspect-[413/370] lg:aspect-auto lg:h-[17.4rem]"}`}>
                   <Image src={service.image} alt={service.imageAlt} fill sizes="(min-width: 1024px) 310px, (min-width: 640px) 46vw, 92vw" className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
                   <span
-                    className={`absolute bottom-0 left-[1.875rem] grid size-[3.75rem] translate-y-[45%] place-items-center rounded-full border-[0.16rem] bg-[var(--color-primary)] text-[var(--color-white)] ${
+                    className={`absolute bottom-0 left-[8.7%] grid aspect-square w-[21.4%] translate-y-[47%] place-items-center rounded-full border-[0.16rem] bg-[var(--color-primary)] text-[var(--color-white)] ${
                       featured ? "border-[var(--color-white)]" : "border-[var(--color-bg-card)]"
                     }`}
                   >
-                    <Icon name={service.icon} className="size-[1.9rem]" strokeWidth={1.8} />
+                    <Icon name={service.icon} className="size-1/2" strokeWidth={1.8} />
                   </span>
                 </div>
-                <div className="flex-1 pl-[2rem] pr-[1.3rem] pb-8 pt-[2.6rem] lg:pb-[1.6rem]">
-                  <h3 className={`font-heading text-[1.6rem] font-bold leading-tight lg:text-[1.875rem] ${featured ? "" : "text-[var(--color-primary-dark)]"}`}>{service.title}</h3>
-                  <p className={`mt-[0.4rem] font-heading text-[1.1rem] leading-[1.45] lg:text-[1.17rem] ${featured ? "" : "text-[var(--color-heading)]"}`}>{service.text}</p>
+                <div className="flex-1 pl-[2rem] pr-[1.8rem] pb-8 pt-[2.6rem] lg:pb-[1.6rem]">
+                  <h3 className={`font-heading text-[1.6rem] font-bold leading-tight lg:text-[1.875rem] transition-colors duration-300 ${featured ? "" : "text-[var(--color-primary-dark)] group-hover:text-[var(--color-primary-light)]"}`}>{service.title}</h3>
+                  <p className={`mt-[0.4rem] font-heading text-[1.1rem] leading-[1.45] lg:text-[1.25rem] lg:leading-[1.75rem] ${featured ? "" : "text-[var(--color-heading)]"}`}>{service.text}</p>
                 </div>
               </li>
             );

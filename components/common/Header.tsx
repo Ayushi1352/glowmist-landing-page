@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { CompanyData, HeaderData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { buttonArrow, buttonClass } from "@/components/ui/SectionHeading";
+import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
 
 /** id of the landing page section a link points to ("#about" → "about") */
 const sectionId = (url: string) => url.replace(/^#/, "");
@@ -98,7 +98,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
 
         <span aria-hidden="true" className="ml-[3.23rem] hidden h-[2.8rem] w-[0.1rem] bg-[var(--color-nav)] opacity-60 lg:block" />
 
-        <nav aria-label={data.mainNavLabel} className="ml-[1.4rem] hidden items-center lg:flex">
+        <nav aria-label={data.mainNavLabel} className="ml-[1.4rem] hidden items-center gap-[0.5rem] lg:flex">
           {data.navLinks.map((link) => {
             const current = sectionId(link.url) === active;
             return (
@@ -106,8 +106,8 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                 key={link.id}
                 href={link.url}
                 aria-current={current ? "location" : undefined}
-                className={`whitespace-nowrap rounded-full px-[1.3rem] py-[0.62rem] font-heading text-[1.32rem] font-bold leading-none transition-colors ${
-                  current ? "bg-[var(--color-bg-pill)] text-[var(--color-heading)]" : "text-[var(--color-nav)] hover:text-[var(--color-primary)]"
+                className={`whitespace-nowrap rounded-full px-[1.3rem] py-[0.62rem] font-heading text-[1.24rem] font-bold leading-none transition-colors ${
+                  current ? "bg-[var(--color-bg-pill)] text-[var(--color-heading)]" : "text-[var(--color-nav)] hover:bg-[var(--color-bg-chip)] hover:text-[var(--color-primary)]"
                 }`}
               >
                 {link.label}

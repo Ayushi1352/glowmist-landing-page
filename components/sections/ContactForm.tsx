@@ -5,6 +5,7 @@ import type { ContactFormData } from "@/types/templates.types";
 import { useDummySubmit } from "@/components/ui/useDummySubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
+import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
 
 /** White fields with a soft border */
 const base =
@@ -87,7 +88,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
         <button
           type="submit"
           disabled={submit.sending}
-          className="group flex h-[3.75rem] items-center justify-center gap-[0.75rem] rounded-[0.4rem] bg-gradient-to-b from-[var(--color-primary)] to-[var(--color-primary-dark)] font-heading text-[1.4rem] font-bold text-[var(--color-white)] transition-[filter] hover:brightness-110 disabled:cursor-wait disabled:opacity-80 sm:col-span-2 lg:mt-[0.5rem] lg:text-[1.59rem]"
+          className={`${buttonClass} h-[3.75rem] !rounded-[0.4rem] font-heading text-[1.4rem] font-bold disabled:cursor-wait disabled:opacity-80 sm:col-span-2 lg:text-[1.59rem]`}
         >
           {submit.sending ? (
             <>
@@ -97,7 +98,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
           ) : (
             <>
               {data.button}
-              <Icon name="LuArrowRight" className="size-[1.5rem] transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.2} />
+              <Icon name="LuArrowRight" className={`${buttonArrow} !size-[1.9rem]`} strokeWidth={2.2} />
             </>
           )}
         </button>

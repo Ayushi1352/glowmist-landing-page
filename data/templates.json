@@ -26,29 +26,29 @@
           "id": "location",
           "icon": "FaMapMarkerAlt",
           "title": "Our Location",
-          "lines": ["B-124, Sector 62, Noida,", "Uttar Pradesh – 201301"],
-          "url": "https://www.google.com/maps/search/?api=1&query=B-124%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201301"
+          "lines": ["123 Main Street,", "New York, NY 10001, USA"],
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
         },
         {
           "id": "phone",
           "icon": "FaPhoneAlt",
           "title": "Call Us",
-          "lines": ["+91 98765 43210"],
-          "url": "tel:+919876543210"
+          "lines": ["+1 0000000000"],
+          "url": "tel:+10000000000"
         },
         {
           "id": "email",
           "icon": "LuMail",
           "title": "Email Us",
-          "lines": ["info@yourspa.com"],
-          "url": "mailto:info@yourspa.com"
+          "lines": ["info@xyz.com"],
+          "url": "mailto:info@xyz.com"
         },
         {
           "id": "website",
           "icon": "LuGlobe",
           "title": "Visit Our Website",
-          "lines": ["www.yourspa.com"],
-          "url": "https://www.yourspa.com"
+          "lines": ["www.xyz.com"],
+          "url": "https://www.xyz.com"
         }
       ]
     },
@@ -68,15 +68,15 @@
           "id": "address",
           "icon": "FaMapMarkerAlt",
           "title": "Address",
-          "lines": ["B-105, Sector 62,", "Noida, Uttar Pradesh – 201301"],
-          "url": "https://www.google.com/maps/search/?api=1&query=B-105%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201301"
+          "lines": ["123 Main Street,", "New York, NY 10001, USA"],
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
         },
         {
           "id": "phone",
           "icon": "FaPhoneAlt",
           "title": "Phone",
-          "lines": ["+91 98765 43210"],
-          "url": "tel:+919876543210"
+          "lines": ["+1 0000000000"],
+          "url": "tel:+10000000000"
         },
         {
           "id": "email",
@@ -101,14 +101,7 @@
         { "id": "pinterest", "icon": "FaPinterestP", "label": "Pinterest", "url": "https://www.pinterest.com/" },
         { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" }
       ],
-      "copyrightText": "© {year} {brand} Beauty & Spa. All Rights Reserved.",
-      "copyrightBrand": "GlowMist",
-      "legalLabel": "Legal",
-      "legalLinks": [
-        { "id": "privacy-policy", "label": "Privacy Policy", "url": "#" },
-        { "id": "terms-conditions", "label": "Terms & Conditions", "url": "#" },
-        { "id": "sitemap", "label": "Sitemap", "url": "#" }
-      ],
+      "copyrightText": "© {year} GlowMist Beauty & Spa. All Rights Reserved. Powered by Lestow.",
       "lilyImage": "/images/footer-lily.webp",
       "decorImage": "/images/footer-spa-decor.webp"
     }
@@ -244,8 +237,10 @@
               "description": "Step inside our spa and experience a world of relaxation, beauty and complete rejuvenation.",
               "image": "/images/spa-experience.webp",
               "imageAlt": "Woman relaxing on a soft towel between candles and a pink lily",
-              "videoUrl": "https://www.youtube.com/",
+              "videoUrl": "https://youtube.com/shorts/lFDxClyJ0hM?si=Z4cdJg3Eu-FMn89X",
+              "videoTitle": "GlowMist spa experience video",
               "playLabel": "Watch our spa experience video",
+              "closeVideoLabel": "Close video",
               "stats": [
                 { "id": "clients", "icon": "PiUsersThree", "value": "5,000+", "label": "Happy Clients" },
                 { "id": "experience", "icon": "PiFlowerLotus", "value": "15+", "label": "Years of Experience" },
@@ -362,7 +357,7 @@
               "description": "Find answers to common questions about our spa services, bookings, and treatments.",
               "image": "/images/faq-model.webp",
               "imageAlt": "Woman resting on a towel beside candles and hot stones",
-              "leafImage": "/images/leaf-faq.webp",
+              "leafImage": "/images/leaf-branch.webp",
               "items": [
                 {
                   "id": "services",

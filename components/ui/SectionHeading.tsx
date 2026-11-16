@@ -52,18 +52,13 @@ export const SectionHeading = ({
 }: HeadingProps) => (
   <div data-reveal className={`text-center text-[var(--color-primary)] ${className}`}>
     <Ornament lineClass={ornamentLineClass} />
-    <h2 className={`mt-[0.15rem] flex items-center justify-center gap-[1.65rem] text-[2.5rem] !leading-[1.05] sm:text-[3.4rem] ${sizeClass} ${titleClass}`}>
+    <h2 className={`-mt-[0.45rem] flex items-center justify-center gap-[1.65rem] text-[2.5rem] !leading-[1.05] sm:text-[3.4rem] ${sizeClass} ${titleClass}`}>
       {sideLines && <span aria-hidden="true" className="h-[0.1rem] w-[6.4rem] bg-[var(--color-divider)] max-md:hidden" />}
       <span>
         <span className={topClass}>{titleTop}</span> <span className={accentClass}>{titleAccent}</span>
       </span>
       {sideLines && <span aria-hidden="true" className="h-[0.1rem] w-[6.4rem] bg-[var(--color-divider)] max-md:hidden" />}
     </h2>
-    {description && <p className={`mx-auto mt-[0.3rem] max-w-[60rem] text-[1.0625rem] leading-snug sm:text-[1.3125rem] ${descriptionClass}`}>{description}</p>}
+    {description && <p className={`mx-auto mt-[0.15rem] max-w-[60rem] text-[1.0625rem] leading-snug sm:text-[1.3125rem] ${descriptionClass}`}>{description}</p>}
   </div>
 );
-
-/** Arrow button look shared by the header, hero and package buttons */
-export const buttonClass =
-  "group inline-flex items-center justify-center gap-[0.6rem] rounded-full bg-gradient-to-b from-[var(--color-primary)] to-[var(--color-primary-dark)] text-[var(--color-white)] shadow-[0_0.5rem_1.25rem_-0.5rem_var(--color-shadow-strong)] transition-[filter,transform] duration-300 hover:-translate-y-0.5 hover:brightness-110";
-export const buttonArrow = "size-[1.15em] transition-transform duration-300 group-hover:translate-x-1";

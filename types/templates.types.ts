@@ -65,11 +65,7 @@ export interface FooterData {
   hours: OpeningHour[];
   socialLabel: string;
   socialLinks: SocialLink[];
-  /** `{year}` and `{brand}` are filled in; the brand word shows in pink */
   copyrightText: string;
-  copyrightBrand: string;
-  legalLabel: string;
-  legalLinks: LinkItem[];
   lilyImage: string;
   decorImage: string;
 }
@@ -148,8 +144,11 @@ export interface ExperienceData extends SplitTitle {
   description: string;
   image: string;
   imageAlt: string;
+  /** YouTube, Vimeo or .mp4 link; when empty the play button is not shown */
   videoUrl: string;
+  videoTitle: string;
   playLabel: string;
+  closeVideoLabel: string;
   stats: StatItem[];
 }
 

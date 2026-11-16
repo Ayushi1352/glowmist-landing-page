@@ -27,7 +27,7 @@ export const TestimonialsSection = ({ data }: { data?: TestimonialsData }) => {
       />
 
       <div className="relative mx-auto max-w-[90rem] px-4 pb-44 pt-14 sm:px-6 sm:pb-52 sm:pt-16 lg:pb-[7rem] lg:pt-[3.75rem]">
-        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} ornamentLineClass="bg-[var(--color-nav)]" />
+        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} ornamentLineClass="bg-[var(--color-nav)]" descriptionClass="font-heading text-[var(--color-heading)] lg:!text-[1.45rem]" />
         <TestimonialSlider data={data} />
       </div>
     </section>

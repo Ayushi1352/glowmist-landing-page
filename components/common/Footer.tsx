@@ -12,10 +12,10 @@ const heading = "font-heading text-[1.6rem] font-bold leading-tight text-[var(--
 const underline = "mt-[0.45rem] block h-[0.19rem] w-[3.75rem] rounded-full bg-[var(--color-pink)]";
 const divider = "hidden w-[0.1rem] shrink-0 bg-[var(--color-pink)] opacity-70 lg:mt-[4rem] lg:block lg:h-[14.3rem]";
 
-// Logo, text and social links; quick links; contact details; opening hours; then copyright and the legal links.
+// Logo, text and social links; quick links; contact details; opening hours; then the copyright line.
 export const Footer = async ({ data, company }: { data?: FooterData; company: CompanyData }) => {
   if (!data) return null;
-  const [before, after = ""] = data.copyrightText.replace("{year}", String(await currentYear())).split("{brand}");
+  const copyright = data.copyrightText.replace("{year}", String(await currentYear()));
 
   return (
     <footer className="relative isolate overflow-hidden bg-[var(--color-bg-dark)] text-[var(--color-white)]">
@@ -26,7 +26,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
         width={540}
         height={200}
         sizes="(min-width: 1024px) 405px, 260px"
-        className="pointer-events-none absolute right-0 top-[26rem] -z-10 hidden w-[25.3rem] lg:left-[64.69rem] lg:right-auto lg:top-[18.4rem] lg:block"
+        className="pointer-events-none absolute right-0 top-[26rem] -z-10 hidden w-[25.3rem] lg:top-[18.4rem] lg:block"
       />
 
       <div className="relative mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-0">
@@ -34,7 +34,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
           {/* brand */}
           <div className="lg:ml-[7.83rem] lg:w-[18.2rem]">
             <Image src={company.logoLight} alt={company.logoAlt} width={company.logoWidth} height={company.logoHeight} sizes="221px" className="h-auto w-[12rem] lg:ml-[1.3rem] lg:w-[13.83rem]" />
-            <p className="mt-5 font-sans text-[1.02rem] leading-[1.7] text-[var(--color-white-85)] lg:mt-[1.4rem] lg:text-[1.125rem] lg:leading-[1.83rem] lg:tracking-[-0.015em]">{data.description}</p>
+            <p className="mt-5 font-sans text-[1.02rem] leading-[1.7] text-[var(--color-white-85)] lg:mt-[2.4rem] lg:text-[1.125rem] lg:leading-[1.83rem] lg:tracking-[-0.015em]">{data.description}</p>
             <ul aria-label={data.socialLabel} className="mt-6 flex gap-[0.8rem] lg:ml-[0.23rem] lg:mt-[1.6rem]">
               {data.socialLinks.map((social) => (
                 <li key={social.id}>
@@ -52,7 +52,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
             </ul>
           </div>
 
-          <span aria-hidden="true" className={`${divider} lg:ml-[2.34rem]`} />
+          <span aria-hidden="true" className={`${divider} lg:ml-[1.7rem]`} />
 
           {/* quick links */}
           <nav aria-label={data.quickLinksTitle} className="lg:ml-[1.73rem] lg:mt-[2.8rem] lg:w-[12.25rem]">
@@ -86,7 +86,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
                       target={external ? "_blank" : undefined}
                       rel={external ? "noopener noreferrer" : undefined}
                       aria-label={`${item.title}: ${item.lines.join(" ")}`}
-                      className="group flex items-center gap-[1.125rem] font-sans text-[1.02rem] leading-[1.36rem] text-[var(--color-white-85)] transition-colors hover:text-[var(--color-white)] lg:text-[1.125rem]"
+                      className="group flex items-center gap-[1.125rem] font-sans text-[1.02rem] leading-[1.36rem] text-[var(--color-white-85)] transition-colors hover:text-[var(--color-white)] lg:text-[1.06rem]"
                     >
                       <span className="grid size-[2.34rem] shrink-0 place-items-center rounded-[0.47rem] bg-[var(--color-pink)] text-[var(--color-white)]">
                         <Icon name={item.icon} className="size-[1.15rem]" />
@@ -111,16 +111,16 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
           <div className="lg:ml-[2.25rem] lg:mt-[2.8rem] lg:w-[24rem]">
             <h2 className={heading}>{data.hoursTitle}</h2>
             <span aria-hidden="true" className={underline} />
-            <div className="mt-5 flex items-start gap-[1.5rem] lg:mt-[1.6rem]">
+            <div className="mt-5 flex items-start gap-[1.5rem] lg:mt-[1.2rem]">
               <span className="grid size-[2.34rem] shrink-0 place-items-center rounded-[0.47rem] bg-[var(--color-pink)] text-[var(--color-white)]">
                 <Icon name={data.hoursIcon} className="size-[1.25rem]" strokeWidth={2} />
               </span>
-              <dl className="grid grid-cols-[auto_auto_auto] items-center gap-x-[0.8rem] font-sans text-[0.95rem] leading-[1.92rem] text-[var(--color-white-85)] lg:text-[0.98rem]">
+              <dl className="grid grid-cols-[auto_auto_auto] items-center gap-x-[0.8rem] font-sans text-[0.95rem] leading-[1.92rem] text-[var(--color-white-85)] lg:text-[0.92rem]">
                 {data.hours.map((row) => (
                   <div key={row.id} className="contents">
-                    <dt className="whitespace-nowrap">{row.day}</dt>
+                    <dt className="lg:whitespace-nowrap">{row.day}</dt>
                     <span aria-hidden="true">:</span>
-                    <dd className="whitespace-nowrap text-[var(--color-white)]">{row.time}</dd>
+                    <dd className="text-[var(--color-white)]">{row.time}</dd>
                   </div>
                 ))}
               </dl>
@@ -128,26 +128,8 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-3 border-t-[0.1rem] border-[var(--color-pink)] py-6 text-center font-sans text-[0.98rem] sm:flex-row sm:text-left lg:mx-[3.98rem] lg:pb-[1.9rem] lg:pt-[1.3rem] lg:text-[1.17rem]">
-          <p className="text-[var(--color-white-85)]">
-            {before}
-            <span className="font-semibold text-[var(--color-pink)]">{data.copyrightBrand}</span>
-            {after}
-          </p>
-          <nav aria-label={data.legalLabel}>
-            <ul className="flex flex-wrap items-center justify-center gap-x-[1.7rem] gap-y-2">
-              {data.legalLinks.map((link) => (
-                <li key={link.id} className="flex items-center gap-[1.7rem]">
-                  <span aria-hidden="true" className="text-[var(--color-white-85)] max-sm:hidden">
-                    |
-                  </span>
-                  <a href={link.url} className="text-[var(--color-white-85)] transition-colors hover:text-[var(--color-pink)]">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <div className="border-t-[0.1rem] border-[var(--color-pink)] py-6 text-center font-sans text-[0.98rem] sm:text-left lg:mx-[3.98rem] lg:pb-[1.9rem] lg:pt-[1.3rem] lg:text-[1.2rem]">
+          <p className="text-[var(--color-white-85)]">{copyright}</p>
         </div>
       </div>
     </footer>

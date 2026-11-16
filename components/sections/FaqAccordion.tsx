@@ -9,7 +9,7 @@ export const FaqAccordion = ({ items }: { items: FaqItem[] }) => {
   const [open, setOpen] = useState(items[0]?.id ?? "");
 
   return (
-    <ul className="mt-8 grid gap-[0.94rem] lg:mt-[2.4rem]">
+    <ul className="mt-8 grid gap-[0.75rem] lg:mt-[2rem]">
       {items.map((item, index) => {
         const isOpen = open === item.id;
         return (
@@ -18,7 +18,7 @@ export const FaqAccordion = ({ items }: { items: FaqItem[] }) => {
             data-reveal
             data-reveal-delay={index * 80}
             className={`overflow-hidden rounded-[0.66rem] border-[0.1rem] transition-colors duration-300 ${
-              isOpen ? "border-[var(--color-primary)] bg-[var(--color-bg-faq-open)]" : "border-[var(--color-border-strong)] bg-[var(--color-bg-faq)]"
+              isOpen ? "border-transparent bg-gradient-to-b from-[var(--color-bg-faq-open)] to-[var(--color-bg-card-light)]" : "border-[var(--color-border-strong)] bg-[var(--color-bg-faq)]"
             }`}
           >
             <h3>
@@ -28,7 +28,7 @@ export const FaqAccordion = ({ items }: { items: FaqItem[] }) => {
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${item.id}`}
                 onClick={() => setOpen(isOpen ? "" : item.id)}
-                className={`flex min-h-[4rem] w-full items-center justify-between gap-4 px-5 py-3 text-left font-heading text-[1.15rem] font-bold leading-snug transition-colors duration-300 sm:text-[1.35rem] lg:px-[1.6rem] lg:text-[1.55rem] ${
+                className={`flex min-h-[4rem] w-full items-center justify-between gap-4 px-5 py-3 text-left font-heading text-[1.15rem] font-bold leading-snug transition-colors duration-300 sm:text-[1.35rem] lg:px-[1.6rem] lg:text-[1.6rem] ${
                   isOpen ? "bg-[var(--color-primary)] text-[var(--color-white)]" : "text-[var(--color-heading)] hover:text-[var(--color-primary)]"
                 }`}
               >
@@ -43,7 +43,7 @@ export const FaqAccordion = ({ items }: { items: FaqItem[] }) => {
               className={`grid transition-[grid-template-rows] duration-500 ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
             >
               <div className="min-h-0 overflow-hidden">
-                <p className="px-5 pb-[1.3rem] pt-[0.85rem] font-heading text-[1.02rem] leading-[1.6] text-[var(--color-text)] sm:text-[1.1rem] lg:px-[2.34rem] lg:text-[1.17rem] lg:leading-[1.73rem]">{item.answer}</p>
+                <p className="px-5 pb-[1.3rem] pt-[0.85rem] font-sans text-[1rem] leading-[1.6] text-[var(--color-text)] sm:text-[1.05rem] lg:px-[2.34rem] lg:text-[1.13rem] lg:leading-[1.75rem]">{item.answer}</p>
               </div>
             </div>
           </li>

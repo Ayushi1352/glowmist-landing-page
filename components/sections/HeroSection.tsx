@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { HeroData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { buttonArrow, buttonClass } from "@/components/ui/SectionHeading";
+import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
 
 /** Plays once on load (CSS @starting-style), so the hero never waits for JavaScript */
 const enter = "transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] starting:translate-y-6 starting:opacity-0";
@@ -15,16 +15,17 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
 
   return (
     <section id={data.id} className="relative isolate overflow-hidden bg-[var(--color-bg-hero)] pt-[4.5rem] sm:pt-[5.5rem] lg:pt-[9.375rem]">
+      {/* petals touch the left edge of the page on every screen */}
+      <Image
+        src={data.petalsImage}
+        alt=""
+        width={275}
+        height={250}
+        sizes="(min-width: 1024px) 206px, 110px"
+        className="pointer-events-none absolute left-0 top-[4.5rem] -z-10 w-[6.5rem] opacity-80 sm:top-[5.5rem] sm:w-[8rem] lg:top-[13.6rem] lg:w-[12.9rem] lg:opacity-100"
+      />
       <div className="relative mx-auto max-w-[90rem] px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:h-[59.3rem] lg:p-0">
         {/* decorations */}
-        <Image
-          src={data.petalsImage}
-          alt=""
-          width={275}
-          height={250}
-          sizes="(min-width: 1024px) 206px, 110px"
-          className="pointer-events-none absolute -left-2 top-0 -z-10 w-[6.5rem] opacity-80 sm:w-[8rem] lg:left-0 lg:top-[4.22rem] lg:w-[12.9rem] lg:opacity-100"
-        />
         <Image
           src={data.leafImage}
           alt=""
@@ -44,20 +45,20 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
 
         {/* text */}
         <div className={`relative text-center lg:static lg:text-left ${enter}`}>
-          <p className="inline-flex items-center gap-[1.4rem] font-sans text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[var(--color-heading)] sm:text-base lg:absolute lg:left-[16.31rem] lg:top-[7.85rem] lg:text-[1.25rem] lg:tracking-[0.14em]">
+          <p className="inline-flex items-center gap-[1.4rem] font-sans text-[0.8rem] font-normal uppercase tracking-[0.12em] text-[var(--color-heading)] sm:text-base lg:absolute lg:left-[16.31rem] lg:top-[7.85rem] lg:text-[1.25rem] lg:tracking-[0.14em]">
             {data.label}
             <span aria-hidden="true" className="hidden h-[0.1rem] w-[7.7rem] bg-gradient-to-r from-[var(--color-nav)] to-transparent lg:block" />
           </p>
-          <h1 className="mt-5 font-display text-[3.4rem] font-semibold leading-[1.03] text-[var(--color-heading)] sm:text-[5rem] lg:absolute lg:left-[14.3rem] lg:top-[10.6rem] lg:mt-0 lg:whitespace-nowrap lg:text-[6.94rem]">
+          <h1 className="mt-5 font-display text-[3.4rem] font-semibold leading-[1.03] text-[var(--color-heading)] sm:text-[5rem] lg:absolute lg:left-[14.3rem] lg:top-[10.6rem] lg:mt-0 lg:whitespace-nowrap lg:text-[6.8rem] lg:font-medium">
             <span className="block lg:ml-[0.7rem]">{data.titleTop}</span>
-            <span className="block font-medium italic tracking-[-0.025em] text-[var(--color-primary)]">{data.titleAccent}</span>
+            <span className="block font-medium italic tracking-[-0.03em] text-[var(--color-primary)] lg:text-[6.5rem]">{data.titleAccent}</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:absolute lg:left-[20.53rem] lg:top-[29.5rem] lg:mx-0 lg:mt-0 lg:w-[31.5rem] lg:max-w-none lg:text-[1.25rem] lg:leading-[1.78rem]">
             {data.description}
           </p>
           <a
             href={data.buttonUrl}
-            className={`${buttonClass} mt-8 h-14 px-8 font-heading text-lg font-bold lg:absolute lg:left-[20.86rem] lg:top-[37.73rem] lg:mt-0 lg:h-[3.75rem] lg:w-[14.9rem] lg:px-0 lg:text-[1.4rem]`}
+            className={`${buttonClass} mt-8 h-14 px-8 font-heading text-lg font-bold lg:absolute lg:left-[20.86rem] lg:top-[37.73rem] lg:mt-0 lg:h-[3.75rem] lg:w-[14.9rem] lg:px-0 lg:text-[1.53rem]`}
           >
             {data.buttonText}
             <Icon name="LuArrowRight" className={buttonArrow} strokeWidth={2.2} />

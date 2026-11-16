@@ -12,10 +12,10 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
       <Image
         src={data.leafImage}
         alt=""
-        width={150}
-        height={180}
-        sizes="113px"
-        className="pointer-events-none absolute right-0 top-[1.875rem] -z-10 hidden w-[7.03rem] md:block lg:left-[82.97rem] lg:right-auto"
+        width={290}
+        height={290}
+        sizes="150px"
+        className="pointer-events-none absolute -right-8 top-[1.4rem] -z-10 hidden w-[9.4rem] opacity-90 md:block"
       />
       <div className="relative mx-auto grid max-w-[90rem] gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:block lg:h-[48.5rem] lg:p-0">
         <div data-reveal className="relative mx-auto w-full max-w-[28.5rem] pl-4 pt-4 lg:absolute lg:left-[2.58rem] lg:top-[5.06rem] lg:max-w-none lg:p-0">
@@ -33,7 +33,7 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
                 <span className="text-[var(--color-heading)]">{data.titleTop}</span> {data.titleAccent}
               </h2>
             </div>
-            <p className="mt-3 font-sans text-base text-[var(--color-text)] sm:text-lg lg:mt-[1rem] lg:text-[1.17rem]">{data.description}</p>
+            <p className="mt-3 font-sans text-base text-[var(--color-text)] sm:text-lg lg:mt-[0.6rem] lg:text-[1.23rem]">{data.description}</p>
           </div>
           <FaqAccordion items={data.items} />
         </div>

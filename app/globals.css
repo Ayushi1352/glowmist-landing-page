@@ -50,17 +50,18 @@
   --color-divider: #d9a3ad;
 
   /* Overlays */
-  --color-primary-10: rgba(155, 29, 64, 0.1);
-  --color-white-15: rgba(255, 255, 255, 0.15);
+  
+  
   --color-white-35: rgba(255, 255, 255, 0.35);
   --color-white-40: rgba(255, 255, 255, 0.4);
   --color-white-85: rgba(255, 255, 255, 0.85);
   --color-glass: rgba(253, 240, 242, 0.9);
   --color-glass-border: rgba(255, 205, 218, 0.95);
   --color-contact-shade: rgba(74, 34, 40, 0.18);
+  --color-video-backdrop: rgba(26, 24, 25, 0.82);
 
   /* Shadows */
-  --color-shadow-soft: rgba(155, 29, 64, 0.12);
+  
   --color-shadow-card: rgba(155, 29, 64, 0.18);
   --color-shadow-strong: rgba(133, 18, 47, 0.35);
   --color-shadow-glow: rgba(255, 170, 195, 0.55);

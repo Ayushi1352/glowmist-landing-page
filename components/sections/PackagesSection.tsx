@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { PackagesData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { SectionHeading, buttonArrow, buttonClass } from "@/components/ui/SectionHeading";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { buttonArrow, buttonClass } from "@/components/ui/buttonStyles";
 
 /** Three package cards with a curved price area; the featured one is maroon with a gold outline and a badge */
 export const PackagesSection = ({ data }: { data?: PackagesData }) => {
@@ -17,7 +18,7 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
       </svg>
 
       <div className="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-0 lg:pb-[2.4rem] lg:pt-[3.6rem]">
-        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} descriptionClass="font-sans text-[var(--color-text)] lg:!text-[1.17rem]" />
+        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} descriptionClass="font-sans text-[var(--color-text)] lg:!text-[1.2rem]" />
 
         <ul className="mx-auto mt-14 grid max-w-[28rem] gap-12 md:max-w-none md:grid-cols-2 lg:mt-[3.6rem] lg:w-[77.7rem] lg:grid-cols-3 lg:gap-[1.875rem]">
           {data.packages.map((item, index) => {
@@ -39,12 +40,12 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
                     {data.badgeText}
                   </span>
                 )}
-                <div className={`relative h-[13.3rem] ${featured ? "rounded-t-[1.55rem]" : "rounded-t-[1.6rem]"}`}>
+                <div className={`relative aspect-[526/284] ${featured ? "rounded-t-[1.55rem]" : "rounded-t-[1.6rem]"}`}>
                   <div className={`absolute inset-0 overflow-hidden ${featured ? "rounded-t-[1.55rem]" : "rounded-t-[1.6rem]"}`}>
                     <Image src={item.image} alt={item.imageAlt} fill sizes="(min-width: 1024px) 400px, (min-width: 768px) 46vw, 92vw" className="object-cover" />
                   </div>
-                  <span className="absolute -bottom-[1.4rem] left-1/2 grid size-[3.94rem] -translate-x-1/2 place-items-center rounded-full border-[0.19rem] border-[var(--color-white)] bg-[var(--color-primary)] text-[var(--color-white)]">
-                    <Icon name={data.packageIcon} className="size-[2rem]" />
+                  <span className="absolute bottom-0 left-1/2 grid aspect-square w-[16.8%] -translate-x-1/2 translate-y-[36%] place-items-center rounded-full border-[0.19rem] border-[var(--color-white)] bg-[var(--color-primary)] text-[var(--color-white)]">
+                    <Icon name={data.packageIcon} className="size-1/2" />
                   </span>
                 </div>
 
@@ -52,8 +53,8 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
                   <h3 className="font-heading text-[1.85rem] font-bold leading-[1.2] lg:text-[2.06rem]">
                     <span className={featured ? "" : "text-[var(--color-primary)]"}>{item.nameAccent}</span> {item.name}
                   </h3>
-                  <p className={`mx-auto mt-[0.66rem] max-w-[16.5rem] font-sans text-[0.98rem] leading-[1.45rem] lg:text-[1.08rem] ${featured ? "" : "text-[var(--color-text)]"}`}>{item.description}</p>
-                  <p className="mt-[1.4rem] flex items-center justify-center font-sans text-[0.98rem] font-medium lg:mt-[1.64rem] lg:text-[1.03rem]">
+                  <p className={`mx-auto mt-[0.66rem] max-w-[17.6rem] font-sans text-[0.98rem] leading-[1.45rem] lg:text-[1.08rem] ${featured ? "" : "text-[var(--color-text)]"}`}>{item.description}</p>
+                  <p className="mt-[1.4rem] flex items-center justify-center font-sans text-[0.98rem] font-medium lg:mt-[1.25rem] lg:text-[1.03rem]">
                     <span className="inline-flex items-center gap-[0.6rem]">
                       <Icon name={data.durationIcon} className={`size-[1.4rem] ${featured ? "" : "text-[var(--color-primary)]"}`} strokeWidth={2} />
                       {item.duration}
@@ -68,7 +69,7 @@ export const PackagesSection = ({ data }: { data?: PackagesData }) => {
 
                 {/* the curved price area at the foot of the card */}
                 <div
-                  className={`mt-[1.3rem] pb-[1.4rem] pt-[0.9rem] [border-radius:50%_50%_1.55rem_1.55rem/3rem_3rem_1.55rem_1.55rem] ${
+                  className={`mt-[1.3rem] pb-[1.4rem] lg:mt-[0.6rem] pt-[0.9rem] [border-radius:50%_50%_1.55rem_1.55rem/3rem_3rem_1.55rem_1.55rem] ${
                     featured ? "bg-[var(--color-bg-faq-open)]" : "bg-gradient-to-b from-[var(--color-bg-curve)] to-[var(--color-bg-faq-open)]"
                   }`}
                 >
