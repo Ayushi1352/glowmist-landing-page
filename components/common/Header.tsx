@@ -106,7 +106,7 @@ export const Header = ({ data, company }: { data?: HeaderData; company: CompanyD
                 key={link.id}
                 href={link.url}
                 aria-current={current ? "location" : undefined}
-                className={`whitespace-nowrap rounded-full px-[1.42rem] py-[0.62rem] font-heading text-[1.22rem] font-bold leading-none transition-colors ${
+                className={`whitespace-nowrap rounded-full px-[1.3rem] py-[0.62rem] font-heading text-[1.32rem] font-bold leading-none transition-colors ${
                   current ? "bg-[var(--color-bg-pill)] text-[var(--color-heading)]" : "text-[var(--color-nav)] hover:text-[var(--color-primary)]"
                 }`}
               >

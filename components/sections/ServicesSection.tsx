@@ -18,7 +18,7 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
         className="pointer-events-none absolute right-0 top-[4.45rem] -z-10 hidden w-[13.6rem] md:block lg:left-[76.17rem] lg:right-auto"
       />
       <div className="relative mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-[3.52rem] lg:pb-[2.9rem] lg:pt-[3.98rem]">
-        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} sideLines />
+        <SectionHeading titleTop={data.titleTop} titleAccent={data.titleAccent} description={data.description} sideLines sizeClass="lg:text-[4.41rem]" />
 
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-[2.1rem] lg:grid-cols-4 lg:gap-[1.97rem]">
           {data.services.map((service, index) => {
@@ -47,9 +47,9 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
                     <Icon name={service.icon} className="size-[1.9rem]" strokeWidth={1.8} />
                   </span>
                 </div>
-                <div className="flex-1 px-[2rem] pb-8 pt-[2.6rem] lg:pb-[1.6rem]">
+                <div className="flex-1 pl-[2rem] pr-[1.3rem] pb-8 pt-[2.6rem] lg:pb-[1.6rem]">
                   <h3 className={`font-heading text-[1.6rem] font-bold leading-tight lg:text-[1.875rem] ${featured ? "" : "text-[var(--color-primary-dark)]"}`}>{service.title}</h3>
-                  <p className={`mt-[0.4rem] font-heading text-[1.1rem] leading-[1.45] lg:text-[1.22rem] ${featured ? "" : "text-[var(--color-heading)]"}`}>{service.text}</p>
+                  <p className={`mt-[0.4rem] font-heading text-[1.1rem] leading-[1.45] lg:text-[1.17rem] ${featured ? "" : "text-[var(--color-heading)]"}`}>{service.text}</p>
                 </div>
               </li>
             );

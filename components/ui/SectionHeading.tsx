@@ -32,6 +32,8 @@ type HeadingProps = {
   accentClass?: string;
   topClass?: string;
   descriptionClass?: string;
+  /** desktop title size (the design draws Our Services a little larger than the other titles) */
+  sizeClass?: string;
   className?: string;
 };
 
@@ -45,18 +47,19 @@ export const SectionHeading = ({
   accentClass = "text-[var(--color-primary)]",
   topClass = "text-[var(--color-heading)]",
   descriptionClass = "font-heading text-[var(--color-heading)]",
+  sizeClass = "lg:text-[3.95rem]",
   className = "",
 }: HeadingProps) => (
   <div data-reveal className={`text-center text-[var(--color-primary)] ${className}`}>
     <Ornament lineClass={ornamentLineClass} />
-    <h2 className={`mt-[0.6rem] flex items-center justify-center gap-[1.65rem] text-[2.5rem] sm:text-[3.4rem] lg:text-[4.41rem] ${titleClass}`}>
+    <h2 className={`mt-[0.15rem] flex items-center justify-center gap-[1.65rem] text-[2.5rem] !leading-[1.05] sm:text-[3.4rem] ${sizeClass} ${titleClass}`}>
       {sideLines && <span aria-hidden="true" className="h-[0.1rem] w-[6.4rem] bg-[var(--color-divider)] max-md:hidden" />}
       <span>
         <span className={topClass}>{titleTop}</span> <span className={accentClass}>{titleAccent}</span>
       </span>
       {sideLines && <span aria-hidden="true" className="h-[0.1rem] w-[6.4rem] bg-[var(--color-divider)] max-md:hidden" />}
     </h2>
-    {description && <p className={`mx-auto mt-[0.5rem] max-w-[60rem] text-[1.0625rem] leading-snug sm:text-[1.3125rem] ${descriptionClass}`}>{description}</p>}
+    {description && <p className={`mx-auto mt-[0.3rem] max-w-[60rem] text-[1.0625rem] leading-snug sm:text-[1.3125rem] ${descriptionClass}`}>{description}</p>}
   </div>
 );
 

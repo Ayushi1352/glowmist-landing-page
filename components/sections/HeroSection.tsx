@@ -44,15 +44,15 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
 
         {/* text */}
         <div className={`relative text-center lg:static lg:text-left ${enter}`}>
-          <p className="inline-flex items-center gap-[1.4rem] font-sans text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[var(--color-heading)] sm:text-base lg:absolute lg:left-[16.31rem] lg:top-[7.85rem] lg:text-[1.2rem] lg:tracking-[0.1em]">
+          <p className="inline-flex items-center gap-[1.4rem] font-sans text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[var(--color-heading)] sm:text-base lg:absolute lg:left-[16.31rem] lg:top-[7.85rem] lg:text-[1.25rem] lg:tracking-[0.14em]">
             {data.label}
             <span aria-hidden="true" className="hidden h-[0.1rem] w-[7.7rem] bg-gradient-to-r from-[var(--color-nav)] to-transparent lg:block" />
           </p>
           <h1 className="mt-5 font-display text-[3.4rem] font-semibold leading-[1.03] text-[var(--color-heading)] sm:text-[5rem] lg:absolute lg:left-[14.3rem] lg:top-[10.6rem] lg:mt-0 lg:whitespace-nowrap lg:text-[6.94rem]">
             <span className="block lg:ml-[0.7rem]">{data.titleTop}</span>
-            <span className="block italic text-[var(--color-primary)]">{data.titleAccent}</span>
+            <span className="block font-medium italic tracking-[-0.025em] text-[var(--color-primary)]">{data.titleAccent}</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:absolute lg:left-[20.53rem] lg:top-[29.5rem] lg:mx-0 lg:mt-0 lg:w-[31rem] lg:max-w-none lg:text-[1.17rem] lg:leading-[1.78rem]">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-[var(--color-text)] sm:text-lg lg:absolute lg:left-[20.53rem] lg:top-[29.5rem] lg:mx-0 lg:mt-0 lg:w-[31.5rem] lg:max-w-none lg:text-[1.25rem] lg:leading-[1.78rem]">
             {data.description}
           </p>
           <a
