@@ -1,0 +1,460 @@
+{
+  "common": {
+    "theme": {
+      "fonts": {
+        "primary": "var(--font-outfit), Arial, sans-serif",
+        "heading": "var(--font-tinos), 'Times New Roman', serif",
+        "display": "var(--font-playfair), Georgia, serif"
+      }
+    },
+    "metadata": {
+      "title": "GlowMist Beauty & Spa | Beauty, Wellness & Relaxation",
+      "description": "Indulge in rejuvenating beauty and spa treatments specially designed to relax your mind, refresh your body and enhance your natural glow at GlowMist Beauty & Spa.",
+      "icon": "/images/favicon.png",
+      "lang": "en"
+    },
+    "company": {
+      "name": "GlowMist Beauty & Spa",
+      "logo": "/images/logo.webp",
+      "logoLight": "/images/logo-light.webp",
+      "logoAlt": "GlowMist Beauty & Spa",
+      "logoWidth": 780,
+      "logoHeight": 399,
+      "mark": "/images/lotus.webp",
+      "contactItems": [
+        {
+          "id": "location",
+          "icon": "FaMapMarkerAlt",
+          "title": "Our Location",
+          "lines": ["B-124, Sector 62, Noida,", "Uttar Pradesh – 201301"],
+          "url": "https://www.google.com/maps/search/?api=1&query=B-124%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201301"
+        },
+        {
+          "id": "phone",
+          "icon": "FaPhoneAlt",
+          "title": "Call Us",
+          "lines": ["+91 98765 43210"],
+          "url": "tel:+919876543210"
+        },
+        {
+          "id": "email",
+          "icon": "LuMail",
+          "title": "Email Us",
+          "lines": ["info@yourspa.com"],
+          "url": "mailto:info@yourspa.com"
+        },
+        {
+          "id": "website",
+          "icon": "LuGlobe",
+          "title": "Visit Our Website",
+          "lines": ["www.yourspa.com"],
+          "url": "https://www.yourspa.com"
+        }
+      ]
+    },
+    "Footer": {
+      "description": "Experience premium beauty and spa therapies designed to relax, refresh, and bring out your natural glow.",
+      "quickLinksTitle": "Quick Links",
+      "quickLinks": [
+        { "id": "about-us", "label": "About Us", "url": "#about" },
+        { "id": "our-services", "label": "Our Services", "url": "#services" },
+        { "id": "pricing", "label": "Pricing", "url": "#packages" },
+        { "id": "gallery", "label": "Gallery", "url": "#experience" },
+        { "id": "contact-us", "label": "Contact Us", "url": "#contact" }
+      ],
+      "contactTitle": "Contact Us",
+      "contactItems": [
+        {
+          "id": "address",
+          "icon": "FaMapMarkerAlt",
+          "title": "Address",
+          "lines": ["B-105, Sector 62,", "Noida, Uttar Pradesh – 201301"],
+          "url": "https://www.google.com/maps/search/?api=1&query=B-105%2C%20Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201301"
+        },
+        {
+          "id": "phone",
+          "icon": "FaPhoneAlt",
+          "title": "Phone",
+          "lines": ["+91 98765 43210"],
+          "url": "tel:+919876543210"
+        },
+        {
+          "id": "email",
+          "icon": "FaEnvelope",
+          "title": "Email",
+          "lines": ["info@xyz.com"],
+          "url": "mailto:info@xyz.com"
+        }
+      ],
+      "hoursTitle": "Open Hours",
+      "hoursIcon": "LuCalendarDays",
+      "hours": [
+        { "id": "weekdays", "day": "Monday to Friday", "time": "09:00 AM – 08:00 PM" },
+        { "id": "saturday", "day": "Saturday", "time": "09:00 AM – 07:00 PM" },
+        { "id": "sunday", "day": "Sunday", "time": "10:00 AM – 06:00 PM" }
+      ],
+      "socialLabel": "Follow GlowMist",
+      "socialLinks": [
+        { "id": "facebook", "icon": "FaFacebookF", "label": "Facebook", "url": "https://www.facebook.com/" },
+        { "id": "instagram", "icon": "FaInstagram", "label": "Instagram", "url": "https://www.instagram.com/" },
+        { "id": "x", "icon": "FaXTwitter", "label": "X", "url": "https://x.com/" },
+        { "id": "pinterest", "icon": "FaPinterestP", "label": "Pinterest", "url": "https://www.pinterest.com/" },
+        { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" }
+      ],
+      "copyrightText": "© {year} {brand} Beauty & Spa. All Rights Reserved.",
+      "copyrightBrand": "GlowMist",
+      "legalLabel": "Legal",
+      "legalLinks": [
+        { "id": "privacy-policy", "label": "Privacy Policy", "url": "#" },
+        { "id": "terms-conditions", "label": "Terms & Conditions", "url": "#" },
+        { "id": "sitemap", "label": "Sitemap", "url": "#" }
+      ],
+      "lilyImage": "/images/footer-lily.webp",
+      "decorImage": "/images/footer-spa-decor.webp"
+    }
+  },
+  "categories": {
+    "Spa": {
+      "sections": {
+        "Header": {
+          "variants": {
+            "SpaHeader1": {
+              "logoUrl": "/",
+              "homeLabel": "GlowMist Beauty & Spa — back to top",
+              "navLinks": [
+                { "id": "home", "label": "Home", "url": "#home" },
+                { "id": "about-us", "label": "About Us", "url": "#about" },
+                { "id": "services", "label": "Services", "url": "#services" },
+                { "id": "package", "label": "Package", "url": "#packages" },
+                { "id": "testimonial", "label": "Testimonial", "url": "#testimonials" },
+                { "id": "faq", "label": "FAQ", "url": "#faq" },
+                { "id": "contact", "label": "Contact", "url": "#contact" }
+              ],
+              "buttonText": "Contact Us",
+              "buttonUrl": "#contact",
+              "mainNavLabel": "Main navigation",
+              "mobileNavLabel": "Mobile navigation",
+              "openMenuLabel": "Open menu",
+              "closeMenuLabel": "Close menu"
+            }
+          }
+        },
+        "Hero": {
+          "variants": {
+            "SpaHero1": {
+              "id": "home",
+              "label": "Beauty • Wellness • Relaxation",
+              "titleTop": "Experience",
+              "titleAccent": "Bliss, Embrace",
+              "description": "Indulge in rejuvenating beauty and spa treatments specially designed to relax your mind, refresh your body and enhance your natural glow.",
+              "buttonText": "Contact Us",
+              "buttonUrl": "#contact",
+              "image": "/images/hero-model.webp",
+              "imageAlt": "Smiling woman with a white flower in her hair enjoying a spa moment",
+              "secondImage": "/images/hero-spa-candles.webp",
+              "secondImageAlt": "Rolled towels, candles and a bowl of flowers at the spa",
+              "petalsImage": "/images/hero-petals.webp",
+              "leafImage": "/images/leaf-top.webp",
+              "cornerLeafImage": "/images/leaf-corner.webp"
+            }
+          }
+        },
+        "About": {
+          "variants": {
+            "SpaAbout1": {
+              "id": "about",
+              "label": "About Us",
+              "titleTop": "Your journey to",
+              "titleAccent": "relaxation begins here",
+              "description": "A peaceful space for beauty, wellness and complete rejuvenation of your mind and body.",
+              "image": "/images/about-collage.webp",
+              "imageAlt": "A therapist giving a relaxing facial in a candle-lit room, and a man enjoying a face mask",
+              "features": [
+                {
+                  "id": "mission",
+                  "icon": "PiFlowerLotus",
+                  "title": "Our Mission",
+                  "text": "To provide high-quality beauty and spa services that promote relaxation, wellness and confidence."
+                },
+                {
+                  "id": "vision",
+                  "icon": "TbTargetArrow",
+                  "title": "Our Vision",
+                  "text": "To be a trusted beauty & wellness destination known for exceptional care, modern treatments and a holistic spa experience."
+                }
+              ]
+            }
+          }
+        },
+        "Services": {
+          "variants": {
+            "SpaServices1": {
+              "id": "services",
+              "titleTop": "Our",
+              "titleAccent": "Services",
+              "description": "Indulge in a range of beauty and spa treatments designed to refresh, relax and rejuvenate.",
+              "leafImage": "/images/leaf-branch.webp",
+              "services": [
+                {
+                  "id": "facial-treatment",
+                  "icon": "PiFlowerLotus",
+                  "title": "Facial Treatment",
+                  "text": "Deep cleansing and skin rejuvenation for a natural glow.",
+                  "image": "/images/service-facial.webp",
+                  "imageAlt": "Facial Care — a face mask being brushed on",
+                  "featured": false
+                },
+                {
+                  "id": "body-massage",
+                  "icon": "GiStoneStack",
+                  "title": "Body Massage",
+                  "text": "Relax your body, release tension and restore balance.",
+                  "image": "/images/service-massage.webp",
+                  "imageAlt": "Body Massage — a relaxing shoulder massage",
+                  "featured": true
+                },
+                {
+                  "id": "hair-spa",
+                  "icon": "LuScissors",
+                  "title": "Hair Spa",
+                  "text": "Nourish your hair, reduce damage and add natural shine.",
+                  "image": "/images/service-hair.webp",
+                  "imageAlt": "Hair Spa — a nourishing hair wash",
+                  "featured": false
+                },
+                {
+                  "id": "nail-care",
+                  "icon": "TbBottle",
+                  "title": "Nail Care",
+                  "text": "Professional nail care for healthy, beautiful hands.",
+                  "image": "/images/service-nails.webp",
+                  "imageAlt": "Nail Care — nails being filed",
+                  "featured": false
+                }
+              ]
+            }
+          }
+        },
+        "Experience": {
+          "variants": {
+            "SpaExperience1": {
+              "id": "experience",
+              "titleTop": "Discover Our",
+              "titleAccent": "Spa Experience",
+              "description": "Step inside our spa and experience a world of relaxation, beauty and complete rejuvenation.",
+              "image": "/images/spa-experience.webp",
+              "imageAlt": "Woman relaxing on a soft towel between candles and a pink lily",
+              "videoUrl": "https://www.youtube.com/",
+              "playLabel": "Watch our spa experience video",
+              "stats": [
+                { "id": "clients", "icon": "PiUsersThree", "value": "5,000+", "label": "Happy Clients" },
+                { "id": "experience", "icon": "PiFlowerLotus", "value": "15+", "label": "Years of Experience" },
+                { "id": "treatments", "icon": "GiStoneStack", "value": "50+", "label": "Wellness Treatments" },
+                { "id": "therapists", "icon": "LuLeaf", "value": "20+", "label": "Expert Therapists" }
+              ]
+            }
+          }
+        },
+        "Packages": {
+          "variants": {
+            "SpaPackages1": {
+              "id": "packages",
+              "titleTop": "Our",
+              "titleAccent": "Packages",
+              "description": "Choose from our specially curated spa packages designed for complete relaxation and rejuvenation.",
+              "badgeIcon": "FaCrown",
+              "badgeText": "Most Popular",
+              "packageIcon": "PiFlowerLotus",
+              "durationIcon": "LuClock",
+              "treatmentsIcon": "GiStoneStack",
+              "buttonText": "Book Now",
+              "buttonUrl": "#contact",
+              "packages": [
+                {
+                  "id": "relax",
+                  "nameAccent": "Relax",
+                  "name": "Package",
+                  "description": "A calming treatment to reduce stress and refresh your body.",
+                  "duration": "60 Mins",
+                  "treatments": "2 Treatments",
+                  "price": "₹ 1,499",
+                  "image": "/images/package-relax.webp",
+                  "imageAlt": "Woman enjoying a relaxing back massage",
+                  "featured": false
+                },
+                {
+                  "id": "glow",
+                  "nameAccent": "Glow",
+                  "name": "Package",
+                  "description": "A complete skin rejuvenation package for a healthy, radiant glow.",
+                  "duration": "90 Mins",
+                  "treatments": "3 Treatments",
+                  "price": "₹ 2,499",
+                  "image": "/images/package-glow.webp",
+                  "imageAlt": "Woman receiving a skin rejuvenation face mask",
+                  "featured": true
+                },
+                {
+                  "id": "renew",
+                  "nameAccent": "Renew",
+                  "name": "Package",
+                  "description": "A refreshing head-to-toe experience for total relaxation and renewal.",
+                  "duration": "120 Mins",
+                  "treatments": "4 Treatments",
+                  "price": "₹ 3,999",
+                  "image": "/images/package-renew.webp",
+                  "imageAlt": "Woman enjoying a soothing hair wash",
+                  "featured": false
+                }
+              ]
+            }
+          }
+        },
+        "Testimonials": {
+          "variants": {
+            "SpaTestimonials1": {
+              "id": "testimonials",
+              "titleTop": "Client",
+              "titleAccent": "Testimonials",
+              "description": "Real stories from our valued clients who have experienced the benefits of our spa services.",
+              "flowersImage": "/images/testimonial-flowers.webp",
+              "decorImage": "/images/testimonial-spa-decor.webp",
+              "ratingLabel": "{stars} out of 5 stars",
+              "previousLabel": "Previous testimonial",
+              "nextLabel": "Next testimonial",
+              "showLabel": "Show testimonial from {name}",
+              "startIndex": 1,
+              "items": [
+                {
+                  "id": "rahul-verma",
+                  "name": "Rahul Verma",
+                  "role": "Regular Client",
+                  "quote": "“The body massage here is the best I have had. The therapists are skilled, the ambience is calm, and I leave every session feeling light and completely stress-free.”",
+                  "image": "/images/client-rahul.webp",
+                  "stars": 5
+                },
+                {
+                  "id": "neha-sharma",
+                  "name": "Neha Sharma",
+                  "role": "Regular Client",
+                  "quote": "“The spa treatments here are exceptional. The staff is professional, the environment is peaceful, and the services truly helped me relax and de-stress. I feel refreshed every time I visit!”",
+                  "image": "/images/client-neha.webp",
+                  "stars": 5
+                },
+                {
+                  "id": "priya-mehta",
+                  "name": "Priya Mehta",
+                  "role": "Regular Client",
+                  "quote": "“I booked the Glow Package before my sister’s wedding and my skin has never looked better. Warm staff, spotless rooms and truly relaxing treatments every time.”",
+                  "image": "/images/client-priya.webp",
+                  "stars": 5
+                }
+              ]
+            }
+          }
+        },
+        "Faq": {
+          "variants": {
+            "SpaFaq1": {
+              "id": "faq",
+              "titleTop": "Frequently Asked",
+              "titleAccent": "Questions",
+              "description": "Find answers to common questions about our spa services, bookings, and treatments.",
+              "image": "/images/faq-model.webp",
+              "imageAlt": "Woman resting on a towel beside candles and hot stones",
+              "leafImage": "/images/leaf-faq.webp",
+              "items": [
+                {
+                  "id": "services",
+                  "question": "What spa services do you offer?",
+                  "answer": "We offer a wide range of services including body massage, facials, scrubs, body wraps, wellness therapies, and customized spa packages."
+                },
+                {
+                  "id": "appointment",
+                  "question": "Do I need to book an appointment in advance?",
+                  "answer": "We recommend booking in advance, especially on weekends, so we can reserve your preferred time and therapist. Walk-ins are welcome whenever a slot is free."
+                },
+                {
+                  "id": "skin-types",
+                  "question": "Are your treatments safe for all skin types?",
+                  "answer": "Yes. Our therapists check your skin type before every treatment and use gentle, dermatologically tested products suited to sensitive, oily, dry and combination skin."
+                },
+                {
+                  "id": "session-length",
+                  "question": "How long does a typical spa session take?",
+                  "answer": "Most single treatments take 45 to 60 minutes, while our packages run from 60 to 120 minutes depending on the number of treatments included."
+                },
+                {
+                  "id": "custom-packages",
+                  "question": "Do you offer customized spa packages?",
+                  "answer": "Absolutely. Tell us what you would like to focus on and we will put together a package of treatments that suits your needs, time and budget."
+                }
+              ]
+            }
+          }
+        },
+        "Contact": {
+          "variants": {
+            "SpaContact1": {
+              "id": "contact",
+              "titleTop": "Contact",
+              "titleAccent": "Us",
+              "descriptionLines": ["Have a question, need assistance, or want to book a spa session?", "Get in touch with us — we’re here to help!"],
+              "backgroundImage": "/images/contact-bg.webp",
+              "formTitle": "Send Us a Message"
+            }
+          }
+        },
+        "ContactForm": {
+          "variants": {
+            "SpaContactForm1": {
+              "fields": {
+                "name": "Your Name",
+                "phone": "Your Phone",
+                "email": "Your Email",
+                "service": "Select Service",
+                "message": "Your Message"
+              },
+              "serviceOptions": [
+                "Facial Treatment",
+                "Body Massage",
+                "Hair Spa",
+                "Nail Care",
+                "Relax Package",
+                "Glow Package",
+                "Renew Package"
+              ],
+              "button": "Submit Message",
+              "sending": "Sending…",
+              "successTitle": "Thank you, {name}!",
+              "success": "Your message has been received. Our team will get back to you shortly.",
+              "closeLabel": "Close message"
+            }
+          }
+        }
+      },
+      "templateComponents": {
+        "template-1": {
+          "shared": {
+            "Header": "SpaHeader1",
+            "Footer": "Footer"
+          },
+          "pages": {
+            "home": {
+              "components": [
+                { "key": "Hero", "component": "SpaHero1" },
+                { "key": "About", "component": "SpaAbout1" },
+                { "key": "Services", "component": "SpaServices1" },
+                { "key": "Experience", "component": "SpaExperience1" },
+                { "key": "Packages", "component": "SpaPackages1" },
+                { "key": "Testimonials", "component": "SpaTestimonials1" },
+                { "key": "Faq", "component": "SpaFaq1" },
+                { "key": "Contact", "component": "SpaContact1" }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
