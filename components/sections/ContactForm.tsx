@@ -51,7 +51,7 @@ const SelectField = ({ name, placeholder, options }: { name: string; placeholder
 };
 
 /** The "Send Us a Message" form; dummy submit with a thank-you message in place of the button */
-export const ContactForm = ({ data }: { data?: ContactFormData }) => {
+export const ContactForm = ({ data, serviceOptions }: { data?: ContactFormData; serviceOptions: string[] }) => {
   const submit = useDummySubmit();
   if (!data) return null;
   const { fields } = data;
@@ -68,7 +68,7 @@ export const ContactForm = ({ data }: { data?: ContactFormData }) => {
       <Field name="name" label={fields.name} autoComplete="name" />
       <Field name="phone" type="tel" label={fields.phone} autoComplete="tel" />
       <Field name="email" type="email" label={fields.email} autoComplete="email" />
-      <SelectField name="service" placeholder={fields.service} options={data.serviceOptions} />
+      <SelectField name="service" placeholder={fields.service} options={serviceOptions} />
       <label className="relative block sm:col-span-2">
         <textarea name="message" required rows={4} placeholder=" " aria-label={fields.message} className={`${base} h-[7.27rem] resize-y py-[0.85rem]`} />
         <Label text={fields.message} className="top-[0.85rem]" />

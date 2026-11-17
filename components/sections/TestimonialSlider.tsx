@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import type { TestimonialItem, TestimonialsData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 const AUTOPLAY_MS = 6000;
 
@@ -17,7 +18,7 @@ const Quote = ({ item, ratingLabel, className }: { item: TestimonialItem; rating
     <footer className="mt-5 lg:mt-[1.125rem]">
       <span className="block font-heading text-[1.6rem] font-bold leading-[1.2] text-[var(--color-primary)] lg:text-[1.78rem]">{item.name}</span>
       <span className="mt-[0.15rem] block font-heading text-[1.15rem] text-[var(--color-text)] lg:text-[1.31rem]">{item.role}</span>
-      <span className="mt-[0.7rem] flex justify-center gap-[0.4rem] text-[var(--color-star)]" role="img" aria-label={ratingLabel.replace("{stars}", String(item.stars))}>
+      <span className="mt-[0.7rem] flex justify-center gap-[0.4rem] text-[var(--color-star)]" role="img" aria-label={fill(ratingLabel, { stars: item.stars })}>
         {Array.from({ length: item.stars }, (_, n) => (
           <Icon key={n} name="FaStar" className="size-[1.5rem]" />
         ))}
@@ -47,7 +48,7 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
       <button
         type="button"
         onClick={() => go(step)}
-        aria-label={data.showLabel.replace("{name}", item.name)}
+        aria-label={fill(data.showLabel, { name: item.name })}
         className="relative size-[4.5rem] shrink-0 overflow-hidden rounded-full opacity-90 shadow-[0_0.6rem_1.2rem_-0.6rem_var(--color-shadow-card)] transition-[opacity,transform] duration-300 hover:scale-105 hover:opacity-100 sm:size-[5.5rem] lg:size-[6.84rem]"
       >
         <Image src={item.image} alt="" fill sizes="110px" className="object-cover" />
@@ -100,7 +101,7 @@ export const TestimonialSlider = ({ data }: { data: TestimonialsData }) => {
             <button
               key={item.id}
               type="button"
-              aria-label={data.showLabel.replace("{name}", item.name)}
+              aria-label={fill(data.showLabel, { name: item.name })}
               aria-current={n === index}
               onClick={() => setIndex(n)}
               className={`size-[1.03rem] rounded-full transition-colors duration-300 ${n === index ? "bg-[var(--color-primary)]" : "bg-[var(--color-bg-dot)] hover:bg-[var(--color-border-strong)]"}`}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { CompanyData, FooterData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { fill } from "@/components/ui/text";
 
 /** Fills `{year}` in the copyright line; cached so the footer can still be prerendered. */
 async function currentYear() {
@@ -15,16 +16,18 @@ const divider = "hidden w-[0.1rem] shrink-0 bg-[var(--color-pink)] opacity-70 lg
 // Logo, text and social links; quick links; contact details; opening hours; then the copyright line.
 export const Footer = async ({ data, company }: { data?: FooterData; company: CompanyData }) => {
   if (!data) return null;
-  const copyright = data.copyrightText.replace("{year}", String(await currentYear()));
+  // the footer lists some of the company contact details (the same ones as the contact section), in its own order
+  const contactItems = data.contactIds.flatMap((id) => company.contactItems.filter((item) => item.id === id));
+  const copyright = fill(data.copyrightText, { year: await currentYear() });
 
   return (
     <footer className="relative isolate overflow-hidden bg-[var(--color-bg-dark)] text-[var(--color-white)]">
-      <Image src={data.lilyImage} alt="" width={160} height={460} sizes="120px" className="pointer-events-none absolute left-0 top-[2.67rem] -z-10 w-[5rem] opacity-60 lg:w-[7.5rem] lg:opacity-100" />
+      <Image src={data.lilyImage.src} alt="" width={data.lilyImage.width} height={data.lilyImage.height} sizes="120px" className="pointer-events-none absolute left-0 top-[2.67rem] -z-10 w-[5rem] opacity-60 lg:w-[7.5rem] lg:opacity-100" />
       <Image
-        src={data.decorImage}
+        src={data.decorImage.src}
         alt=""
-        width={540}
-        height={200}
+        width={data.decorImage.width}
+        height={data.decorImage.height}
         sizes="(min-width: 1024px) 405px, 260px"
         className="pointer-events-none absolute right-0 top-[26rem] -z-10 hidden w-[25.3rem] lg:top-[18.4rem] lg:block"
       />
@@ -77,7 +80,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
             <h2 className={heading}>{data.contactTitle}</h2>
             <span aria-hidden="true" className={underline} />
             <ul className="mt-5 grid gap-[1.35rem] lg:mt-[1.6rem]">
-              {data.contactItems.map((item) => {
+              {contactItems.map((item) => {
                 const external = item.url.startsWith("http");
                 return (
                   <li key={item.id}>
@@ -89,7 +92,7 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
                       className="group flex items-center gap-[1.125rem] font-sans text-[1.02rem] leading-[1.36rem] text-[var(--color-white-85)] transition-colors hover:text-[var(--color-white)] lg:text-[1.06rem]"
                     >
                       <span className="grid size-[2.34rem] shrink-0 place-items-center rounded-[0.47rem] bg-[var(--color-pink)] text-[var(--color-white)]">
-                        <Icon name={item.icon} className="size-[1.15rem]" />
+                        <Icon name={item.footerIcon ?? item.icon} className="size-[1.15rem]" />
                       </span>
                       <span className="min-w-0 break-words">
                         {item.lines.map((line) => (

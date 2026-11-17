@@ -10,10 +10,10 @@ export const FaqSection = ({ data }: { data?: FaqData }) => {
   return (
     <section id={data.id} className="relative isolate scroll-mt-[4.5rem] overflow-hidden bg-[var(--color-bg-alt)] lg:scroll-mt-[5.75rem]">
       <Image
-        src={data.leafImage}
+        src={data.leafImage.src}
         alt=""
-        width={290}
-        height={290}
+        width={data.leafImage.width}
+        height={data.leafImage.height}
         sizes="150px"
         className="pointer-events-none absolute -right-8 top-[1.4rem] -z-10 hidden w-[9.4rem] opacity-90 md:block"
       />

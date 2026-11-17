@@ -22,13 +22,16 @@ components/
   common/               Header (tall bar that turns compact on scroll, dropdown card menu on phones and tablets), Footer
   sections/             Hero, About, Services, Experience (+ VideoPlayer), Packages, Testimonials (+ TestimonialSlider),
                         FAQ (+ FaqAccordion), Contact (+ ContactForm)
-  ui/                   Icon, SectionHeading (ornament, title), buttonStyles, ScrollReveal, FormSuccess, useDummySubmit
+  ui/                   Icon, SectionHeading (ornament, title), buttonStyles, ScrollReveal, FormSuccess, useDummySubmit,
+                        useActiveSection
 data/templates.json     all content (sections and their variants)
 types/templates.types.ts
 public/images/          GlowMist photos, decorations, logos and favicon (WebP)
 ```
 
 Each section's `id` in `templates.json` matches a header link (`#about` → `id="about"`).
+
+Content is written once: the footer lists the company contact details (`common.company.contactItems`, picked by `Footer.contactIds`), and the contact form's service list is built in `app/page.tsx` from the Services and Packages sections. Decoration images carry their own pixel size (`{ src, width, height }`).
 
 ## Responsive
 

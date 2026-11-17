@@ -1,8 +1,18 @@
+import type { CSSProperties } from "react";
+
 export interface ThemeFonts {
   primary: string;
   heading: string;
   display: string;
 }
+
+/** CSS variables set on <html> from templates.json (fonts and the lotus ornament) */
+export type RootVariables = CSSProperties & {
+  "--font-primary": string;
+  "--font-heading": string;
+  "--font-display": string;
+  "--lotus-mark": string;
+};
 
 export interface ThemeData {
   fonts: ThemeFonts;
@@ -24,6 +34,8 @@ export interface LinkItem {
 export interface ContactItem {
   id: string;
   icon: string;
+  /** icon in the footer, when it differs from `icon` */
+  footerIcon?: string;
   title: string;
   lines: string[];
   url: string;
@@ -39,6 +51,13 @@ export interface CompanyData {
   /** the lotus from the logo, used for the section ornaments */
   mark: string;
   contactItems: ContactItem[];
+}
+
+/** A decoration image with its own pixel size (so the page reserves its space before it loads) */
+export interface DecorImage {
+  src: string;
+  width: number;
+  height: number;
 }
 
 export interface SocialLink {
@@ -59,15 +78,16 @@ export interface FooterData {
   quickLinksTitle: string;
   quickLinks: LinkItem[];
   contactTitle: string;
-  contactItems: ContactItem[];
+  /** which of the company contact details the footer lists, in order */
+  contactIds: string[];
   hoursTitle: string;
   hoursIcon: string;
   hours: OpeningHour[];
   socialLabel: string;
   socialLinks: SocialLink[];
   copyrightText: string;
-  lilyImage: string;
-  decorImage: string;
+  lilyImage: DecorImage;
+  decorImage: DecorImage;
 }
 
 export interface HeaderData {
@@ -105,9 +125,9 @@ export interface HeroData extends SplitTitle {
   imageAlt: string;
   secondImage: string;
   secondImageAlt: string;
-  petalsImage: string;
-  leafImage: string;
-  cornerLeafImage: string;
+  petalsImage: DecorImage;
+  leafImage: DecorImage;
+  cornerLeafImage: DecorImage;
 }
 
 export interface AboutData extends SplitTitle {
@@ -128,7 +148,7 @@ export interface ServiceCard extends IconCard {
 export interface ServicesData extends SplitTitle {
   id: string;
   description: string;
-  leafImage: string;
+  leafImage: DecorImage;
   services: ServiceCard[];
 }
 
@@ -190,8 +210,8 @@ export interface TestimonialItem {
 export interface TestimonialsData extends SplitTitle {
   id: string;
   description: string;
-  flowersImage: string;
-  decorImage: string;
+  flowersImage: DecorImage;
+  decorImage: DecorImage;
   ratingLabel: string;
   previousLabel: string;
   nextLabel: string;
@@ -212,7 +232,7 @@ export interface FaqData extends SplitTitle {
   description: string;
   image: string;
   imageAlt: string;
-  leafImage: string;
+  leafImage: DecorImage;
   items: FaqItem[];
 }
 
@@ -231,7 +251,6 @@ export interface ContactFormData {
     service: string;
     message: string;
   };
-  serviceOptions: string[];
   button: string;
   sending: string;
   successTitle: string;

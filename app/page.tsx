@@ -12,6 +12,14 @@ import { ContactSection } from "@/components/sections/ContactSection";
 const templateData: SpaTemplateData = rawData;
 const sectionData = templateData.categories.Spa.sections;
 const commonData = templateData.common;
+const servicesData = sectionData.Services?.variants?.SpaServices1;
+const packagesData = sectionData.Packages?.variants?.SpaPackages1;
+
+// The form’s service list: every service card, then every package ("Relax Package")
+const serviceOptions = [
+  ...(servicesData?.services ?? []).map((item) => item.title),
+  ...(packagesData?.packages ?? []).map((item) => `${item.nameAccent} ${item.name}`),
+];
 
 /*
   One landing page built from the GlowMist design. Every button leads to the contact form.
@@ -22,15 +30,16 @@ export default function Home() {
     <main className="flex-1">
       <HeroSection data={sectionData.Hero?.variants?.SpaHero1} />
       <AboutSection data={sectionData.About?.variants?.SpaAbout1} />
-      <ServicesSection data={sectionData.Services?.variants?.SpaServices1} />
+      <ServicesSection data={servicesData} />
       <ExperienceSection data={sectionData.Experience?.variants?.SpaExperience1} />
-      <PackagesSection data={sectionData.Packages?.variants?.SpaPackages1} />
+      <PackagesSection data={packagesData} />
       <TestimonialsSection data={sectionData.Testimonials?.variants?.SpaTestimonials1} />
       <FaqSection data={sectionData.Faq?.variants?.SpaFaq1} />
       <ContactSection
         data={sectionData.Contact?.variants?.SpaContact1}
         form={sectionData.ContactForm?.variants?.SpaContactForm1}
         company={commonData.company}
+        serviceOptions={serviceOptions}
       />
     </main>
   );

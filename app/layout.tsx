@@ -1,8 +1,7 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Outfit, Playfair_Display, Tinos } from "next/font/google";
 import rawData from "@/data/templates.json";
-import type { SpaTemplateData } from "@/types/templates.types";
+import type { RootVariables, SpaTemplateData } from "@/types/templates.types";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -23,12 +22,12 @@ const sectionData = templateData.categories.Spa.sections;
 const commonData = templateData.common;
 const headerData = sectionData.Header?.variants?.SpaHeader1;
 
-const rootVariables = {
+const rootVariables: RootVariables = {
   "--font-primary": commonData.theme.fonts.primary,
   "--font-heading": commonData.theme.fonts.heading,
   "--font-display": commonData.theme.fonts.display,
   "--lotus-mark": `url(${commonData.company.mark})`,
-} as CSSProperties;
+};
 
 export const metadata: Metadata = {
   title: commonData.metadata.title,

@@ -17,28 +17,28 @@ export const HeroSection = ({ data }: { data?: HeroData }) => {
     <section id={data.id} className="relative isolate overflow-hidden bg-[var(--color-bg-hero)] pt-[4.5rem] sm:pt-[5.5rem] lg:pt-[9.375rem]">
       {/* petals touch the left edge of the page on every screen */}
       <Image
-        src={data.petalsImage}
+        src={data.petalsImage.src}
         alt=""
-        width={275}
-        height={250}
+        width={data.petalsImage.width}
+        height={data.petalsImage.height}
         sizes="(min-width: 1024px) 206px, 110px"
         className="pointer-events-none absolute left-0 top-[4.5rem] -z-10 w-[6.5rem] opacity-80 sm:top-[5.5rem] sm:w-[8rem] lg:top-[13.6rem] lg:w-[12.9rem] lg:opacity-100"
       />
       <div className="relative mx-auto max-w-[90rem] px-4 pb-14 pt-10 sm:px-6 sm:pb-16 sm:pt-14 lg:h-[59.3rem] lg:p-0">
         {/* decorations */}
         <Image
-          src={data.leafImage}
+          src={data.leafImage.src}
           alt=""
-          width={225}
-          height={255}
+          width={data.leafImage.width}
+          height={data.leafImage.height}
           sizes="169px"
           className="pointer-events-none absolute left-[49.45rem] top-[-0.47rem] -z-10 hidden w-[10.55rem] lg:block"
         />
         <Image
-          src={data.cornerLeafImage}
+          src={data.cornerLeafImage.src}
           alt=""
-          width={255}
-          height={235}
+          width={data.cornerLeafImage.width}
+          height={data.cornerLeafImage.height}
           sizes="(min-width: 1024px) 191px, 120px"
           className="pointer-events-none absolute -right-2 bottom-2 z-10 w-[7.5rem] lg:left-[77.58rem] lg:right-auto lg:top-[38.2rem] lg:w-[11.95rem]"
         />

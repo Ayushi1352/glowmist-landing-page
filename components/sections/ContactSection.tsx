@@ -5,7 +5,15 @@ import { Icon } from "@/components/ui/Icon";
 import { Ornament, titleClass } from "@/components/ui/SectionHeading";
 
 /** Spa photo background; white title in the middle, contact details on the left and the message form on the right */
-export const ContactSection = ({ data, form, company }: { data?: ContactData; form?: ContactFormData; company: CompanyData }) => {
+type Props = {
+  data?: ContactData;
+  form?: ContactFormData;
+  company: CompanyData;
+  /** choices of the form’s service list (built in app/page.tsx from the Services and Packages sections) */
+  serviceOptions: string[];
+};
+
+export const ContactSection = ({ data, form, company, serviceOptions }: Props) => {
   if (!data) return null;
 
   return (
@@ -65,7 +73,7 @@ export const ContactSection = ({ data, form, company }: { data?: ContactData; fo
             className="mx-auto w-full max-w-[38.2rem] rounded-[1.6rem] border-[0.14rem] border-[var(--color-glass-border)] bg-[var(--color-glass)] px-5 pb-7 pt-6 shadow-[0_0_2.5rem_-0.5rem_var(--color-shadow-glow)] backdrop-blur-md sm:px-[2.25rem] lg:ml-auto lg:mr-[3.05rem] lg:w-[38.2rem] lg:rounded-[2.06rem] lg:pb-[1.8rem] lg:pt-[1.4rem]"
           >
             <h3 className="text-center font-heading text-[2rem] font-bold leading-[1.2] text-[var(--color-primary)] lg:text-[2.44rem]">{data.formTitle}</h3>
-            <ContactForm data={form} />
+            <ContactForm data={form} serviceOptions={serviceOptions} />
           </div>
         </div>
       </div>

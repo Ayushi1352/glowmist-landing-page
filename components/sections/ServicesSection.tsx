@@ -10,10 +10,10 @@ export const ServicesSection = ({ data }: { data?: ServicesData }) => {
   return (
     <section id={data.id} className="relative isolate scroll-mt-[4.5rem] overflow-hidden bg-[var(--color-bg-soft)] lg:scroll-mt-[5.75rem]">
       <Image
-        src={data.leafImage}
+        src={data.leafImage.src}
         alt=""
-        width={290}
-        height={290}
+        width={data.leafImage.width}
+        height={data.leafImage.height}
         sizes="218px"
         className="pointer-events-none absolute right-0 top-[4.45rem] -z-10 hidden w-[13.6rem] md:block"
       />
