@@ -23,7 +23,7 @@ const toEmbed = (url: string): { kind: "iframe" | "video"; src: string; vertical
   return { kind: "video", src: url };
 };
 
-/** Gold play button over the spa photo; opens the video in a popup (closes on ×, Esc or a click outside) */
+/** Maroon play button over the spa photo (gold on hover); opens the video in a popup (closes on ×, Esc or a click outside) */
 export const VideoPlayer = ({ url, playLabel, closeLabel, title }: Props) => {
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -45,7 +45,7 @@ export const VideoPlayer = ({ url, playLabel, closeLabel, title }: Props) => {
         className="group absolute left-[48.9%] top-[52.4%] grid size-[4.5rem] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-[var(--color-white-35)] sm:size-[6.8rem]"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-[var(--color-white-35)] [animation-duration:2.4s] motion-reduce:hidden" aria-hidden="true" />
-        <span className="relative grid size-[3.2rem] place-items-center rounded-full border-[0.2rem] border-[var(--color-white)] bg-[var(--color-gold)] text-[var(--color-white)] shadow-[0_0.6rem_1.4rem_-0.5rem_var(--color-shadow-strong)] transition-[transform,background-color] duration-300 group-hover:scale-110 group-hover:bg-[var(--color-primary)] sm:size-[4.875rem] sm:border-[0.23rem]">
+        <span className="relative grid size-[3.2rem] place-items-center rounded-full border-[0.2rem] border-[var(--color-white)] bg-[var(--color-primary)] text-[var(--color-white)] shadow-[0_0.6rem_1.4rem_-0.5rem_var(--color-shadow-strong)] transition-[transform,background-color] duration-300 group-hover:scale-110 group-hover:bg-[var(--color-gold)] sm:size-[4.875rem] sm:border-[0.23rem]">
           <Icon name="FaPlay" className="ml-[0.2rem] size-[1.1rem] sm:size-[1.6rem]" />
         </span>
       </button>

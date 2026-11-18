@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { LilyArt } from "@/components/ui/LineArt";
 import type { CompanyData, FooterData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { fill } from "@/components/ui/text";
@@ -22,14 +23,14 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
 
   return (
     <footer className="relative isolate overflow-hidden bg-[var(--color-bg-dark)] text-[var(--color-white)]">
-      <Image src={data.lilyImage.src} alt="" width={data.lilyImage.width} height={data.lilyImage.height} sizes="120px" className="pointer-events-none absolute left-0 top-[2.67rem] -z-10 w-[5rem] opacity-60 lg:w-[7.5rem] lg:opacity-100" />
+      <LilyArt className="pointer-events-none absolute left-0 top-[2.67rem] -z-10 h-auto w-[5rem] text-[var(--color-lily-line)] opacity-60 lg:w-[7.5rem] lg:opacity-100" />
       <Image
         src={data.decorImage.src}
         alt=""
         width={data.decorImage.width}
         height={data.decorImage.height}
         sizes="(min-width: 1024px) 405px, 260px"
-        className="pointer-events-none absolute right-0 top-[26rem] -z-10 hidden w-[25.3rem] lg:top-[18.4rem] lg:block"
+        className="pointer-events-none absolute right-0 top-[26rem] -z-10 hidden w-[25.3rem] mix-blend-lighten lg:top-[18.4rem] lg:block"
       />
 
       <div className="relative mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-0">
@@ -114,16 +115,17 @@ export const Footer = async ({ data, company }: { data?: FooterData; company: Co
           <div className="lg:ml-[2.25rem] lg:mt-[2.8rem] lg:w-[24rem]">
             <h2 className={heading}>{data.hoursTitle}</h2>
             <span aria-hidden="true" className={underline} />
-            <div className="mt-5 flex items-start gap-[1.5rem] lg:mt-[1.2rem]">
+            <div className="mt-5 flex items-start gap-3 sm:gap-[1.5rem] lg:mt-[1.2rem]">
               <span className="grid size-[2.34rem] shrink-0 place-items-center rounded-[0.47rem] bg-[var(--color-pink)] text-[var(--color-white)]">
                 <Icon name={data.hoursIcon} className="size-[1.25rem]" strokeWidth={2} />
               </span>
-              <dl className="grid grid-cols-[auto_auto_auto] items-center gap-x-[0.8rem] font-sans text-[0.95rem] leading-[1.92rem] text-[var(--color-white-85)] lg:text-[0.92rem]">
+              {/* on narrow phones the day may wrap, the time never does */}
+              <dl className="grid grid-cols-[auto_auto_auto] items-center gap-x-2 gap-y-1.5 font-sans text-[0.85rem] leading-[1.3rem] text-[var(--color-white-85)] sm:gap-x-[0.8rem] sm:gap-y-0 sm:text-[0.95rem] sm:leading-[1.92rem] lg:text-[0.92rem]">
                 {data.hours.map((row) => (
                   <div key={row.id} className="contents">
                     <dt className="lg:whitespace-nowrap">{row.day}</dt>
                     <span aria-hidden="true">:</span>
-                    <dd className="text-[var(--color-white)]">{row.time}</dd>
+                    <dd className="whitespace-nowrap text-[var(--color-white)]">{row.time}</dd>
                   </div>
                 ))}
               </dl>

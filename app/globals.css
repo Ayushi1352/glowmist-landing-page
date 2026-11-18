@@ -58,6 +58,10 @@
   --color-glass: rgba(253, 240, 242, 0.9);
   --color-glass-border: rgba(255, 205, 218, 0.95);
   --color-contact-shade: rgba(74, 34, 40, 0.18);
+  /* contact background: rose-brown, darker at the top, lighter at the foot (as in the design) */
+  --color-contact-tint-top: #5e3632;
+  --color-contact-tint-mid: #85504f;
+  --color-contact-tint-bottom: #b98481;
   --color-video-backdrop: rgba(26, 24, 25, 0.82);
 
   /* Shadows */
@@ -66,11 +70,13 @@
   --color-shadow-strong: rgba(133, 18, 47, 0.35);
   --color-shadow-glow: rgba(255, 170, 195, 0.55);
   --color-shadow-menu: rgba(42, 16, 15, 0.3);
+  --color-shadow-label: rgba(0, 0, 0, 0.25);
+
+  /* Decorations drawn in code (components/ui/LineArt.tsx) */
+  --color-leaf-line: rgba(208, 118, 142, 0.7);
+  --color-lily-line: #8a8888;
+  --color-petal-dark: #8e1838;
+  --color-petal: #b8325a;
+  --color-petal-light: #e17b96;
 }
 
-/* Lotus mark from the logo, used as a mask so it takes the colour of the text around it */
-.lotus-mark {
-  background-color: currentColor;
-  -webkit-mask: var(--lotus-mark) center / contain no-repeat;
-  mask: var(--lotus-mark) center / contain no-repeat;
-}

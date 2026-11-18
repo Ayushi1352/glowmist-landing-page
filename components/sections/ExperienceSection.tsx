@@ -2,7 +2,8 @@ import Image from "next/image";
 import type { ExperienceData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 import { VideoPlayer } from "@/components/sections/VideoPlayer";
-import { Ornament, titleClass } from "@/components/ui/SectionHeading";
+import { Ornament, ornamentGap, titleClass } from "@/components/ui/SectionHeading";
+import { sectionSpace } from "@/components/ui/sectionSpace";
 
 /** Big photo with a play button and a maroon corner line on the left, title, text and four numbers on the right */
 export const ExperienceSection = ({ data }: { data?: ExperienceData }) => {
@@ -10,13 +11,13 @@ export const ExperienceSection = ({ data }: { data?: ExperienceData }) => {
 
   return (
     <section id={data.id} className="scroll-mt-[4.5rem] bg-[var(--color-bg-main)] lg:scroll-mt-[5.75rem]">
-      <div className="relative mx-auto grid max-w-[90rem] gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:flex lg:items-start lg:gap-0 lg:px-0 lg:pb-[3.98rem] lg:pt-[3.66rem]">
+      <div className={`relative mx-auto grid max-w-[90rem] gap-10 px-4 sm:px-6 lg:flex lg:items-start lg:gap-0 lg:px-0 ${sectionSpace}`}>
         {/* the maroon line that wraps the top-left corner of the photo */}
         <svg
           aria-hidden="true"
           viewBox="0 0 364 597"
           fill="none"
-          className="pointer-events-none absolute left-[2.25rem] top-[2.58rem] hidden h-[27.98rem] w-[17.06rem] text-[var(--color-primary)] lg:block"
+          className="pointer-events-none absolute left-[2.25rem] top-[2.92rem] hidden h-[27.98rem] w-[17.06rem] text-[var(--color-primary)] lg:block"
         >
           <defs>
             <linearGradient id="experience-line" x1="0" y1="1" x2="1" y2="0">
@@ -39,7 +40,7 @@ export const ExperienceSection = ({ data }: { data?: ExperienceData }) => {
           <div data-reveal className="text-center text-[var(--color-primary)] lg:text-left">
             <div className="inline-flex flex-col items-center">
               <Ornament />
-              <h2 className={`mt-[0.45rem] text-[2.3rem] sm:text-[2.8rem] lg:whitespace-nowrap lg:text-[3.25rem] ${titleClass}`}>
+              <h2 className={`${ornamentGap} text-[length:min(2.3rem,calc((100vw-2rem)/8.4))] sm:text-[2.8rem] lg:whitespace-nowrap lg:text-[3.25rem] ${titleClass}`}>
                 <span className="not-italic text-[var(--color-heading)]">{data.titleTop}</span> {data.titleAccent}
               </h2>
             </div>
@@ -57,7 +58,7 @@ export const ExperienceSection = ({ data }: { data?: ExperienceData }) => {
                 className="flex items-center rounded-[1.4rem] bg-gradient-to-r from-[var(--color-bg-card)] to-[var(--color-bg-card-light)] py-4 pl-4 lg:h-[7.03rem] lg:py-0 lg:pl-[1.22rem]"
               >
                 <span className="grid size-16 shrink-0 place-items-center rounded-full bg-[var(--color-bg-icon)] text-[var(--color-primary)] lg:size-[4.6rem]">
-                  <Icon name={stat.icon} className="size-8 lg:size-[2.35rem]" strokeWidth={1.6} />
+                  <Icon name={stat.icon} className="size-10 lg:size-[3.1rem]" strokeWidth={1.4} />
                 </span>
                 <span aria-hidden="true" className="mx-4 h-14 w-[0.1rem] shrink-0 bg-[var(--color-divider)] lg:ml-[1.125rem] lg:mr-[1.5rem] lg:h-[4.2rem]" />
                 <span>

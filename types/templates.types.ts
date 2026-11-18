@@ -6,12 +6,11 @@ export interface ThemeFonts {
   display: string;
 }
 
-/** CSS variables set on <html> from templates.json (fonts and the lotus ornament) */
+/** CSS variables set on <html> from templates.json (fonts) */
 export type RootVariables = CSSProperties & {
   "--font-primary": string;
   "--font-heading": string;
   "--font-display": string;
-  "--lotus-mark": string;
 };
 
 export interface ThemeData {
@@ -48,8 +47,6 @@ export interface CompanyData {
   logoAlt: string;
   logoWidth: number;
   logoHeight: number;
-  /** the lotus from the logo, used for the section ornaments */
-  mark: string;
   contactItems: ContactItem[];
 }
 
@@ -86,7 +83,6 @@ export interface FooterData {
   socialLabel: string;
   socialLinks: SocialLink[];
   copyrightText: string;
-  lilyImage: DecorImage;
   decorImage: DecorImage;
 }
 
@@ -125,9 +121,6 @@ export interface HeroData extends SplitTitle {
   imageAlt: string;
   secondImage: string;
   secondImageAlt: string;
-  petalsImage: DecorImage;
-  leafImage: DecorImage;
-  cornerLeafImage: DecorImage;
 }
 
 export interface AboutData extends SplitTitle {
@@ -136,19 +129,22 @@ export interface AboutData extends SplitTitle {
   description: string;
   image: string;
   imageAlt: string;
+  /** the smaller photo that overlaps the bottom-right corner of the arch photo */
+  secondImage: string;
+  secondImageAlt: string;
   features: IconCard[];
 }
 
 export interface ServiceCard extends IconCard {
   image: string;
+  /** the large upright word written over the right edge of the photo */
+  imageLabel: string;
   imageAlt: string;
-  featured: boolean;
 }
 
 export interface ServicesData extends SplitTitle {
   id: string;
   description: string;
-  leafImage: DecorImage;
   services: ServiceCard[];
 }
 
@@ -182,6 +178,7 @@ export interface PackageCard {
   price: string;
   image: string;
   imageAlt: string;
+  /** shows the "Most Popular" badge on this card (the maroon highlight itself only appears on hover, on every card) */
   featured: boolean;
 }
 
@@ -232,7 +229,6 @@ export interface FaqData extends SplitTitle {
   description: string;
   image: string;
   imageAlt: string;
-  leafImage: DecorImage;
   items: FaqItem[];
 }
 

@@ -2,7 +2,8 @@ import Image from "next/image";
 import type { CompanyData, ContactData, ContactFormData } from "@/types/templates.types";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Icon } from "@/components/ui/Icon";
-import { Ornament, titleClass } from "@/components/ui/SectionHeading";
+import { Ornament, ornamentGap, titleClass } from "@/components/ui/SectionHeading";
+import { sectionSpace } from "@/components/ui/sectionSpace";
 
 /** Spa photo background; white title in the middle, contact details on the left and the message form on the right */
 type Props = {
@@ -18,14 +19,21 @@ export const ContactSection = ({ data, form, company, serviceOptions }: Props) =
 
   return (
     <section id={data.id} className="relative isolate scroll-mt-[4.5rem] overflow-hidden bg-[var(--color-bg-dark)] lg:scroll-mt-[5.75rem]">
-      <Image src={data.backgroundImage} alt="" fill sizes="100vw" className="-z-20 object-cover object-left" />
+      {/*
+        Background: a calm rose-brown gradient, with the spa photo only on the left edge, fading out before the
+        contact details (so the details and the form always sit on a clean colour).
+      */}
+      <div aria-hidden="true" className="absolute inset-0 -z-20 bg-gradient-to-b from-[var(--color-contact-tint-top)] via-[var(--color-contact-tint-mid)] to-[var(--color-contact-tint-bottom)]" />
+      <div aria-hidden="true" className="absolute inset-y-0 left-0 -z-20 w-[55%] opacity-60 [mask-image:linear-gradient(to_right,black_40%,transparent)] sm:w-[40%] lg:w-[27rem] lg:opacity-100 lg:[mask-image:linear-gradient(to_right,black_55%,transparent)]">
+        <Image src={data.backgroundImage} alt="" fill sizes="(min-width: 1024px) 432px, 55vw" className="object-cover object-[35%_70%]" />
+      </div>
       {/* a light shade on phones and tablets, where the text runs over the bright towels */}
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[var(--color-contact-shade)] lg:hidden" />
 
-      <div className="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 sm:py-16 lg:px-0 lg:pb-[3.9rem] lg:pt-[1.4rem]">
+      <div className={`mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-0 ${sectionSpace}`}>
         <div data-reveal className="text-center text-[var(--color-white)]">
           <Ornament lineClass="bg-[var(--color-white)]" />
-          <h2 className={`-mt-[0.45rem] text-[2.8rem] sm:text-[3.6rem] lg:text-[5.2rem] ${titleClass}`}>
+          <h2 className={`${ornamentGap} text-[2.8rem] sm:text-[3.6rem] lg:text-[5.2rem] ${titleClass}`}>
             {data.titleTop} <span className="text-[var(--color-pink-light)]">{data.titleAccent}</span>
           </h2>
           <p className="mx-auto mt-[0.5rem] max-w-[40rem] font-heading text-[1.1rem] leading-[1.5] sm:text-[1.2rem] lg:max-w-none lg:text-[1.55rem] lg:leading-[1.9rem]">
@@ -53,8 +61,8 @@ export const ContactSection = ({ data, form, company, serviceOptions }: Props) =
                       <Icon name={item.icon} className="size-[1.75rem]" strokeWidth={1.9} />
                     </span>
                     <span className="min-w-0">
-                      <span className="block font-heading text-[1.3rem] font-bold leading-tight transition-colors group-hover:text-[var(--color-pink-light)] lg:text-[1.4rem]">{item.title}</span>
-                      <span className="mt-[0.2rem] block break-words font-sans text-[1.1rem] leading-[1.6rem] group-hover:underline group-hover:underline-offset-4 lg:text-[1.22rem]">
+                      <span className="block font-heading text-[1.3rem] font-bold leading-tight transition-colors group-hover:text-[var(--color-pink-light)] lg:text-[1.5rem]">{item.title}</span>
+                      <span className={`mt-[0.2rem] block break-words font-sans text-[1.1rem] leading-[1.6rem] group-hover:underline group-hover:underline-offset-4 ${item.lines.length > 1 ? "lg:text-[1.13rem] lg:leading-[1.45rem]" : "lg:text-[1.45rem]"}`}>
                         {item.lines.map((line) => (
                           <span key={line} className="block">
                             {line}

@@ -18,9 +18,8 @@
       "logo": "/images/logo.webp",
       "logoLight": "/images/logo-light.webp",
       "logoAlt": "GlowMist Beauty & Spa",
-      "logoWidth": 780,
-      "logoHeight": 399,
-      "mark": "/images/lotus.webp",
+      "logoWidth": 900,
+      "logoHeight": 461,
       "contactItems": [
         {
           "id": "location",
@@ -81,8 +80,7 @@
         { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" }
       ],
       "copyrightText": "© {year} GlowMist Beauty & Spa. All Rights Reserved. Powered by Lestow.",
-      "lilyImage": { "src": "/images/footer-lily.webp", "width": 160, "height": 460 },
-      "decorImage": { "src": "/images/footer-spa-decor.webp", "width": 540, "height": 200 }
+      "decorImage": { "src": "/images/footer-spa-decor.webp", "width": 1000, "height": 338 }
     }
   },
   "categories": {
@@ -124,10 +122,7 @@
               "image": "/images/hero-model.webp",
               "imageAlt": "Smiling woman with a white flower in her hair enjoying a spa moment",
               "secondImage": "/images/hero-spa-candles.webp",
-              "secondImageAlt": "Rolled towels, candles and a bowl of flowers at the spa",
-              "petalsImage": { "src": "/images/hero-petals.webp", "width": 275, "height": 250 },
-              "leafImage": { "src": "/images/leaf-top.webp", "width": 225, "height": 255 },
-              "cornerLeafImage": { "src": "/images/leaf-corner.webp", "width": 255, "height": 235 }
+              "secondImageAlt": "Rolled towels, candles and a bowl of flowers at the spa"
             }
           }
         },
@@ -139,8 +134,10 @@
               "titleTop": "Your journey to",
               "titleAccent": "relaxation begins here",
               "description": "A peaceful space for beauty, wellness and complete rejuvenation of your mind and body.",
-              "image": "/images/about-collage.webp",
-              "imageAlt": "A therapist giving a relaxing facial in a candle-lit room, and a man enjoying a face mask",
+              "image": "/images/about-main.webp",
+              "imageAlt": "A woman in a soft robe resting in a candle-lit spa room",
+              "secondImage": "/images/about-small.webp",
+              "secondImageAlt": "A man enjoying a face mask treatment",
               "features": [
                 {
                   "id": "mission",
@@ -165,7 +162,6 @@
               "titleTop": "Our",
               "titleAccent": "Services",
               "description": "Indulge in a range of beauty and spa treatments designed to refresh, relax and rejuvenate.",
-              "leafImage": { "src": "/images/leaf-branch.webp", "width": 290, "height": 290 },
               "services": [
                 {
                   "id": "facial-treatment",
@@ -173,17 +169,17 @@
                   "title": "Facial Treatment",
                   "text": "Deep cleansing and skin rejuvenation for a natural glow.",
                   "image": "/images/service-facial.webp",
-                  "imageAlt": "Facial Care — a face mask being brushed on",
-                  "featured": false
+                  "imageLabel": "Facial Care",
+                  "imageAlt": "Facial Care — a face mask being brushed on"
                 },
                 {
                   "id": "body-massage",
-                  "icon": "GiStoneStack",
+                  "icon": "GmStones",
                   "title": "Body Massage",
                   "text": "Relax your body, release tension and restore balance.",
                   "image": "/images/service-massage.webp",
-                  "imageAlt": "Body Massage — a relaxing shoulder massage",
-                  "featured": true
+                  "imageLabel": "Body Massage",
+                  "imageAlt": "Body Massage — a relaxing shoulder massage"
                 },
                 {
                   "id": "hair-spa",
@@ -191,8 +187,8 @@
                   "title": "Hair Spa",
                   "text": "Nourish your hair, reduce damage and add natural shine.",
                   "image": "/images/service-hair.webp",
-                  "imageAlt": "Hair Spa — a nourishing hair wash",
-                  "featured": false
+                  "imageLabel": "Hair Spa",
+                  "imageAlt": "Hair Spa — a nourishing hair wash"
                 },
                 {
                   "id": "nail-care",
@@ -200,8 +196,8 @@
                   "title": "Nail Care",
                   "text": "Professional nail care for healthy, beautiful hands.",
                   "image": "/images/service-nails.webp",
-                  "imageAlt": "Nail Care — nails being filed",
-                  "featured": false
+                  "imageLabel": "Nail Care",
+                  "imageAlt": "Nail Care — nails being filed"
                 }
               ]
             }
@@ -223,7 +219,7 @@
               "stats": [
                 { "id": "clients", "icon": "PiUsersThree", "value": "5,000+", "label": "Happy Clients" },
                 { "id": "experience", "icon": "PiFlowerLotus", "value": "15+", "label": "Years of Experience" },
-                { "id": "treatments", "icon": "GiStoneStack", "value": "50+", "label": "Wellness Treatments" },
+                { "id": "treatments", "icon": "GmStones", "value": "50+", "label": "Wellness Treatments" },
                 { "id": "therapists", "icon": "LuLeaf", "value": "20+", "label": "Expert Therapists" }
               ]
             }
@@ -240,7 +236,7 @@
               "badgeText": "Most Popular",
               "packageIcon": "PiFlowerLotus",
               "durationIcon": "LuClock",
-              "treatmentsIcon": "GiStoneStack",
+              "treatmentsIcon": "GmStones",
               "buttonText": "Book Now",
               "buttonUrl": "#contact",
               "packages": [
@@ -291,8 +287,8 @@
               "titleTop": "Client",
               "titleAccent": "Testimonials",
               "description": "Real stories from our valued clients who have experienced the benefits of our spa services.",
-              "flowersImage": { "src": "/images/testimonial-flowers.webp", "width": 360, "height": 390 },
-              "decorImage": { "src": "/images/testimonial-spa-decor.webp", "width": 555, "height": 320 },
+              "flowersImage": { "src": "/images/testimonial-flowers.webp", "width": 592, "height": 700 },
+              "decorImage": { "src": "/images/testimonial-spa-decor.webp", "width": 1000, "height": 539 },
               "ratingLabel": "{stars} out of 5 stars",
               "previousLabel": "Previous testimonial",
               "nextLabel": "Next testimonial",
@@ -336,7 +332,6 @@
               "description": "Find answers to common questions about our spa services, bookings, and treatments.",
               "image": "/images/faq-model.webp",
               "imageAlt": "Woman resting on a towel beside candles and hot stones",
-              "leafImage": { "src": "/images/leaf-branch.webp", "width": 290, "height": 290 },
               "items": [
                 {
                   "id": "services",

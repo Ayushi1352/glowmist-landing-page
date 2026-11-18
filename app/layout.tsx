@@ -26,7 +26,6 @@ const rootVariables: RootVariables = {
   "--font-primary": commonData.theme.fonts.primary,
   "--font-heading": commonData.theme.fonts.heading,
   "--font-display": commonData.theme.fonts.display,
-  "--lotus-mark": `url(${commonData.company.mark})`,
 };
 
 export const metadata: Metadata = {
