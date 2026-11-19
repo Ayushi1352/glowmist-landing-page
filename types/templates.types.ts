@@ -151,7 +151,8 @@ export interface ServicesData extends SplitTitle {
 export interface StatItem {
   id: string;
   icon: string;
-  value: string;
+  value: number;
+  suffix: string;
   label: string;
 }
 

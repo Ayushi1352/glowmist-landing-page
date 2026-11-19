@@ -28,7 +28,7 @@ export const AboutSection = ({ data }: { data?: AboutData }) => {
             <path d="M3 345A440 335 0 0 1 395 6" stroke="url(#about-arc)" strokeWidth="3.5" strokeLinecap="round" />
           </svg>
           <div className="absolute left-[1.1%] top-[2%] h-[97.6%] w-[93.75%] overflow-hidden [border-radius:50%_50%_7%_7%/33%_33%_6%_6%]">
-            <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 641px, (min-width: 640px) 510px, 86vw" className="object-cover object-[40%_50%]" />
+            <Image src={data.image} alt={data.imageAlt} fill quality={90} sizes="(min-width: 1024px) 641px, (min-width: 640px) 510px, 86vw" className="object-cover object-[57%_50%]" />
           </div>
           <div className="absolute left-[60.1%] top-[51.1%] h-[37.9%] w-[39.1%] overflow-hidden rounded-[1.1rem] border-[0.3rem] border-[var(--color-white)] bg-[var(--color-white)] shadow-[0_1rem_2rem_-1rem_var(--color-shadow-card)] lg:border-[0.33rem]">
             <Image src={data.secondImage} alt={data.secondImageAlt} fill quality={90} sizes="(min-width: 1024px) 268px, (min-width: 640px) 213px, 36vw" className="object-cover" />

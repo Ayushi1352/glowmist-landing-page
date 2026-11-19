@@ -23,7 +23,7 @@ components/
   sections/             Hero, About, Services, Experience (+ VideoPlayer), Packages, Testimonials (+ TestimonialSlider),
                         FAQ (+ FaqAccordion), Contact (+ ContactForm)
   ui/                   Icon, LineArt (leaf sprigs, lily, lotus, petals drawings), SectionHeading (ornament, title),
-                        sectionSpace, DesignFrame, buttonStyles, ScrollReveal, FormSuccess, useDummySubmit,
+                        sectionSpace, DesignFrame, buttonStyles, ScrollReveal, CountUp, FormSuccess, useDummySubmit,
                         useActiveSection, text
 data/templates.json     all content (sections and their variants)
 types/templates.types.ts

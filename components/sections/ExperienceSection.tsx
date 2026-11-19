@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ExperienceData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { CountUp } from "@/components/ui/CountUp";
 import { VideoPlayer } from "@/components/sections/VideoPlayer";
 import { Ornament, ornamentGap, titleClass } from "@/components/ui/SectionHeading";
 import { sectionSpace } from "@/components/ui/sectionSpace";
@@ -62,7 +63,9 @@ export const ExperienceSection = ({ data }: { data?: ExperienceData }) => {
                 </span>
                 <span aria-hidden="true" className="mx-4 h-14 w-[0.1rem] shrink-0 bg-[var(--color-divider)] lg:ml-[1.125rem] lg:mr-[1.5rem] lg:h-[4.2rem]" />
                 <span>
-                  <span className="block font-heading text-[2.1rem] font-bold leading-none text-[var(--color-primary)] lg:text-[2.72rem]">{stat.value}</span>
+                  <span className="block font-heading text-[2.1rem] font-bold leading-none text-[var(--color-primary)] lg:text-[2.72rem]">
+                    <CountUp value={stat.value} suffix={stat.suffix} />
+                  </span>
                   <span className="mt-[0.35rem] block font-sans text-base text-[var(--color-text)] lg:text-[1.17rem]">{stat.label}</span>
                 </span>
               </li>

@@ -25,14 +25,19 @@
           "id": "location",
           "icon": "FaMapMarkerAlt",
           "title": "Our Location",
-          "lines": ["123 Main Street,", "New York, NY 10001, USA"],
+          "lines": [
+            "123 Main Street,",
+            "New York, NY 10001, USA"
+          ],
           "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street+New+York+NY+10001+USA"
         },
         {
           "id": "phone",
           "icon": "FaPhoneAlt",
           "title": "Call Us",
-          "lines": ["+1 0000000000"],
+          "lines": [
+            "+1 0000000000"
+          ],
           "url": "tel:+10000000000"
         },
         {
@@ -40,14 +45,18 @@
           "icon": "LuMail",
           "footerIcon": "FaEnvelope",
           "title": "Email Us",
-          "lines": ["info@xyz.com"],
+          "lines": [
+            "info@xyz.com"
+          ],
           "url": "mailto:info@xyz.com"
         },
         {
           "id": "website",
           "icon": "LuGlobe",
           "title": "Visit Our Website",
-          "lines": ["www.xyz.com"],
+          "lines": [
+            "www.xyz.com"
+          ],
           "url": "https://www.xyz.com"
         }
       ]
@@ -56,31 +65,96 @@
       "description": "Experience premium beauty and spa therapies designed to relax, refresh, and bring out your natural glow.",
       "quickLinksTitle": "Quick Links",
       "quickLinks": [
-        { "id": "about-us", "label": "About Us", "url": "#about" },
-        { "id": "our-services", "label": "Our Services", "url": "#services" },
-        { "id": "pricing", "label": "Pricing", "url": "#packages" },
-        { "id": "gallery", "label": "Gallery", "url": "#experience" },
-        { "id": "contact-us", "label": "Contact Us", "url": "#contact" }
+        {
+          "id": "about-us",
+          "label": "About Us",
+          "url": "#about"
+        },
+        {
+          "id": "our-services",
+          "label": "Our Services",
+          "url": "#services"
+        },
+        {
+          "id": "pricing",
+          "label": "Pricing",
+          "url": "#packages"
+        },
+        {
+          "id": "gallery",
+          "label": "Gallery",
+          "url": "#experience"
+        },
+        {
+          "id": "contact-us",
+          "label": "Contact Us",
+          "url": "#contact"
+        }
       ],
       "contactTitle": "Contact Us",
-      "contactIds": ["location", "phone", "email"],
+      "contactIds": [
+        "location",
+        "phone",
+        "email"
+      ],
       "hoursTitle": "Open Hours",
       "hoursIcon": "LuCalendarDays",
       "hours": [
-        { "id": "weekdays", "day": "Monday to Friday", "time": "09:00 AM – 08:00 PM" },
-        { "id": "saturday", "day": "Saturday", "time": "09:00 AM – 07:00 PM" },
-        { "id": "sunday", "day": "Sunday", "time": "10:00 AM – 06:00 PM" }
+        {
+          "id": "weekdays",
+          "day": "Monday to Friday",
+          "time": "09:00 AM – 08:00 PM"
+        },
+        {
+          "id": "saturday",
+          "day": "Saturday",
+          "time": "09:00 AM – 07:00 PM"
+        },
+        {
+          "id": "sunday",
+          "day": "Sunday",
+          "time": "10:00 AM – 06:00 PM"
+        }
       ],
       "socialLabel": "Follow GlowMist",
       "socialLinks": [
-        { "id": "facebook", "icon": "FaFacebookF", "label": "Facebook", "url": "https://www.facebook.com/" },
-        { "id": "instagram", "icon": "FaInstagram", "label": "Instagram", "url": "https://www.instagram.com/" },
-        { "id": "x", "icon": "FaXTwitter", "label": "X", "url": "https://x.com/" },
-        { "id": "pinterest", "icon": "FaPinterestP", "label": "Pinterest", "url": "https://www.pinterest.com/" },
-        { "id": "youtube", "icon": "FaYoutube", "label": "YouTube", "url": "https://www.youtube.com/" }
+        {
+          "id": "facebook",
+          "icon": "FaFacebookF",
+          "label": "Facebook",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "id": "instagram",
+          "icon": "FaInstagram",
+          "label": "Instagram",
+          "url": "https://www.instagram.com/"
+        },
+        {
+          "id": "x",
+          "icon": "FaXTwitter",
+          "label": "X",
+          "url": "https://x.com/"
+        },
+        {
+          "id": "pinterest",
+          "icon": "FaPinterestP",
+          "label": "Pinterest",
+          "url": "https://www.pinterest.com/"
+        },
+        {
+          "id": "youtube",
+          "icon": "FaYoutube",
+          "label": "YouTube",
+          "url": "https://www.youtube.com/"
+        }
       ],
       "copyrightText": "© {year} GlowMist Beauty & Spa. All Rights Reserved. Powered by Lestow.",
-      "decorImage": { "src": "/images/footer-spa-decor.webp", "width": 1000, "height": 338 }
+      "decorImage": {
+        "src": "/images/footer-spa-decor.webp",
+        "width": 1000,
+        "height": 338
+      }
     }
   },
   "categories": {
@@ -92,13 +166,41 @@
               "logoUrl": "/",
               "homeLabel": "GlowMist Beauty & Spa — back to top",
               "navLinks": [
-                { "id": "home", "label": "Home", "url": "#home" },
-                { "id": "about-us", "label": "About Us", "url": "#about" },
-                { "id": "services", "label": "Services", "url": "#services" },
-                { "id": "package", "label": "Package", "url": "#packages" },
-                { "id": "testimonial", "label": "Testimonial", "url": "#testimonials" },
-                { "id": "faq", "label": "FAQ", "url": "#faq" },
-                { "id": "contact", "label": "Contact", "url": "#contact" }
+                {
+                  "id": "home",
+                  "label": "Home",
+                  "url": "#home"
+                },
+                {
+                  "id": "about-us",
+                  "label": "About Us",
+                  "url": "#about"
+                },
+                {
+                  "id": "services",
+                  "label": "Services",
+                  "url": "#services"
+                },
+                {
+                  "id": "package",
+                  "label": "Package",
+                  "url": "#packages"
+                },
+                {
+                  "id": "testimonial",
+                  "label": "Testimonial",
+                  "url": "#testimonials"
+                },
+                {
+                  "id": "faq",
+                  "label": "FAQ",
+                  "url": "#faq"
+                },
+                {
+                  "id": "contact",
+                  "label": "Contact",
+                  "url": "#contact"
+                }
               ],
               "buttonText": "Contact Us",
               "buttonUrl": "#contact",
@@ -135,9 +237,9 @@
               "titleAccent": "relaxation begins here",
               "description": "A peaceful space for beauty, wellness and complete rejuvenation of your mind and body.",
               "image": "/images/about-main.webp",
-              "imageAlt": "A woman in a soft robe resting in a candle-lit spa room",
+              "imageAlt": "A therapist wrapping a towel around a relaxed woman's hair in a candle-lit spa room",
               "secondImage": "/images/about-small.webp",
-              "secondImageAlt": "A man enjoying a face mask treatment",
+              "secondImageAlt": "A man receiving a face mask treatment",
               "features": [
                 {
                   "id": "mission",
@@ -217,10 +319,34 @@
               "playLabel": "Watch our spa experience video",
               "closeVideoLabel": "Close video",
               "stats": [
-                { "id": "clients", "icon": "PiUsersThree", "value": "5,000+", "label": "Happy Clients" },
-                { "id": "experience", "icon": "PiFlowerLotus", "value": "15+", "label": "Years of Experience" },
-                { "id": "treatments", "icon": "GmStones", "value": "50+", "label": "Wellness Treatments" },
-                { "id": "therapists", "icon": "LuLeaf", "value": "20+", "label": "Expert Therapists" }
+                {
+                  "id": "clients",
+                  "icon": "PiUsersThree",
+                  "value": 5000,
+                  "suffix": "+",
+                  "label": "Happy Clients"
+                },
+                {
+                  "id": "experience",
+                  "icon": "PiFlowerLotus",
+                  "value": 15,
+                  "suffix": "+",
+                  "label": "Years of Experience"
+                },
+                {
+                  "id": "treatments",
+                  "icon": "GmStones",
+                  "value": 50,
+                  "suffix": "+",
+                  "label": "Wellness Treatments"
+                },
+                {
+                  "id": "therapists",
+                  "icon": "LuLeaf",
+                  "value": 20,
+                  "suffix": "+",
+                  "label": "Expert Therapists"
+                }
               ]
             }
           }
@@ -287,8 +413,16 @@
               "titleTop": "Client",
               "titleAccent": "Testimonials",
               "description": "Real stories from our valued clients who have experienced the benefits of our spa services.",
-              "flowersImage": { "src": "/images/testimonial-flowers.webp", "width": 592, "height": 700 },
-              "decorImage": { "src": "/images/testimonial-spa-decor.webp", "width": 1000, "height": 539 },
+              "flowersImage": {
+                "src": "/images/testimonial-flowers.webp",
+                "width": 592,
+                "height": 700
+              },
+              "decorImage": {
+                "src": "/images/testimonial-spa-decor.webp",
+                "width": 1000,
+                "height": 539
+              },
               "ratingLabel": "{stars} out of 5 stars",
               "previousLabel": "Previous testimonial",
               "nextLabel": "Next testimonial",
@@ -368,7 +502,10 @@
               "id": "contact",
               "titleTop": "Contact",
               "titleAccent": "Us",
-              "descriptionLines": ["Have a question, need assistance, or want to book a spa session?", "Get in touch with us — we’re here to help!"],
+              "descriptionLines": [
+                "Have a question, need assistance, or want to book a spa session?",
+                "Get in touch with us — we’re here to help!"
+              ],
               "backgroundImage": "/images/contact-bg.webp",
               "formTitle": "Send Us a Message"
             }
@@ -397,19 +534,43 @@
         "template-1": {
           "shared": {
             "Header": "SpaHeader1",
-            "Footer": "Footer"
+            "Footer": "common.Footer"
           },
           "pages": {
             "home": {
               "components": [
-                { "key": "Hero", "component": "SpaHero1" },
-                { "key": "About", "component": "SpaAbout1" },
-                { "key": "Services", "component": "SpaServices1" },
-                { "key": "Experience", "component": "SpaExperience1" },
-                { "key": "Packages", "component": "SpaPackages1" },
-                { "key": "Testimonials", "component": "SpaTestimonials1" },
-                { "key": "Faq", "component": "SpaFaq1" },
-                { "key": "Contact", "component": "SpaContact1" }
+                {
+                  "key": "Hero",
+                  "component": "SpaHero1"
+                },
+                {
+                  "key": "About",
+                  "component": "SpaAbout1"
+                },
+                {
+                  "key": "Services",
+                  "component": "SpaServices1"
+                },
+                {
+                  "key": "Experience",
+                  "component": "SpaExperience1"
+                },
+                {
+                  "key": "Packages",
+                  "component": "SpaPackages1"
+                },
+                {
+                  "key": "Testimonials",
+                  "component": "SpaTestimonials1"
+                },
+                {
+                  "key": "Faq",
+                  "component": "SpaFaq1"
+                },
+                {
+                  "key": "Contact",
+                  "component": "SpaContact1"
+                }
               ]
             }
           }
